@@ -1,0 +1,34 @@
+# Source / working files — keep locally, don't push to GitHub
+# (the live site uses the optimized derivatives, not the originals)
+
+# Original brand source files (used to generate flame-icon.webp + og-image.jpg)
+Logo.png
+Brand.png
+
+# Original favicon archive (the expanded favicon_io/ folder is what the site uses)
+favicon_io.zip
+
+# Original full-size hero photo (Background.webp is the version the site serves)
+Background.jpg
+
+# Old non-scannable Canva QR (replaced by reviews.png)
+Reviews QR.png
+
+# Unused PNG fallback for flame icon (HTML only references .webp)
+flame-icon.png
+
+# Unused derivative — generated but not referenced live
+brand-lockup.webp
+
+# Internal session notes — do NOT publish to a public repo
+HANDOFF_CONTEXT.md
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.tmp
+*~
+.vscode/
+.idea/

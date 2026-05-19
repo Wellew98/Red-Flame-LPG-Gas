@@ -3,6 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Analytics (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0OQH07YRP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B0OQH07YRP');
+  // Lead conversion tracking: fire event on every WhatsApp / phone-call click
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('tel:') === 0) gtag('event', 'lead_call');
+    else if (href.indexOf('wa.me/') !== -1) gtag('event', 'lead_whatsapp');
+  });
+</script>
 <title>Gas Refill Cape Town — Free Same-Day LPG Delivery | Red Flame Gas</title>
 <meta name="description" content="Free same-day gas refill & delivery across Cape Town — Woodstock, Higgovale, Pinelands, Rondebosch, Claremont, Atlantic Seaboard. LPG cylinders from 5 kg, gas installations with COC (SANS 10087), gas cages. WhatsApp 064 510 9495.">
 <meta name="keywords" content="gas delivery cape town, free gas delivery, lpg gas cape town, gas refill cape town, gas refill woodstock, same day gas delivery, gas installation, gas coc certificate, gas certificate of compliance, gas bottles woodstock, order gas whatsapp cape town, gas shop cape town, 5kg gas price, 9kg gas price, 14kg gas price, 19kg gas price, 48kg gas price, 9kg gas cylinder, 19kg gas cylinder, 48kg gas cylinder, lpg gas price cape town">

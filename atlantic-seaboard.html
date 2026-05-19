@@ -3,6 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Analytics (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0OQH07YRP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B0OQH07YRP');
+  // Lead conversion tracking: fire event on every WhatsApp / phone-call click
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('tel:') === 0) gtag('event', 'lead_call');
+    else if (href.indexOf('wa.me/') !== -1) gtag('event', 'lead_whatsapp');
+  });
+</script>
 <title>Gas Refill Atlantic Seaboard — Free Same-Day Delivery | Red Flame Gas</title>
 <meta name="description" content="Gas refill on the Atlantic Seaboard — free same-day LPG delivery to Sea Point, Bantry Bay, Clifton, Camps Bay, Green Point, Mouille Point, Fresnaye, Bakoven. Gas installations with COC (SANS 10087). WhatsApp 064 510 9495.">
 <meta name="keywords" content="gas refill atlantic seaboard, gas delivery atlantic seaboard, gas refill sea point, gas delivery sea point, gas refill camps bay, lpg green point cape town, gas bottle bantry bay, gas clifton cape town, gas fresnaye, gas mouille point, same day gas atlantic seaboard, gas cages atlantic seaboard, gas coc atlantic seaboard, gas certificate of compliance sea point">
@@ -28,36 +44,215 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://www.redflamegas.co.za/#business",
-  "name": "Red Flame Gas Supplier Atlantic Seaboard Delivery",
-  "alternateName": ["Red Flame Gas Suppliers", "Red Flame Gas", "Redflame Gas Supplier"],
-  "description": "Same-day free LPG gas delivery from 5 kg, gas installations with COC (SANS 10087), gas cages and all general LPG products across the Atlantic Seaboard — Sea Point, Bantry Bay, Clifton, Camps Bay, Fresnaye, Three Anchor Bay, Mouille Point, Green Point and Bakoven — from the Red Flame Gas Supplier shop in Woodstock, Cape Town.",
-  "image": "https://www.redflamegas.co.za/Background.webp",
-  "sameAs": ["https://www.facebook.com/RedFlameLPGas/"],
-  "url": "https://www.redflamegas.co.za/atlantic-seaboard",
-  "telephone": "+27645109495",
-  "email": "info@redflamegas.co.za",
-  "address": {"@type":"PostalAddress","streetAddress":"170 Victoria Road","addressLocality":"Woodstock","addressRegion":"Western Cape","postalCode":"7925","addressCountry":"ZA"},
-  "areaServed": [
-    {"@type":"Place","name":"Atlantic Seaboard, Cape Town"},
-    {"@type":"Place","name":"Sea Point"},
-    {"@type":"Place","name":"Bantry Bay"},
-    {"@type":"Place","name":"Clifton"},
-    {"@type":"Place","name":"Camps Bay"},
-    {"@type":"Place","name":"Fresnaye"},
-    {"@type":"Place","name":"Three Anchor Bay"},
-    {"@type":"Place","name":"Mouille Point"},
-    {"@type":"Place","name":"Green Point"},
-    {"@type":"Place","name":"Bakoven"}
-  ],
-  "openingHoursSpecification": [{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}],
-  "priceRange":"R",
-  "makesOffer": [
-    {"@type":"Offer","name":"Gas Refill and Delivery","description":"Same-day LPG refill and free delivery across the Atlantic Seaboard — cylinders from 5 kg."},
-    {"@type":"Offer","name":"Gas Installation with COC Certification","description":"LPG Gas Installations built to SANS 10087, Gas Certificate of Compliance (COC) issued on the job, for Sea Point to Camps Bay homes, apartments and restaurants."},
-    {"@type":"Offer","name":"Gas Cages","description":"Outdoor gas cages supplied and fitted for Atlantic Seaboard apartment blocks, restaurants and guesthouses."},
-    {"@type":"Offer","name":"All General LPG Gas Products","description":"Regulators, hoses, fittings, gas detectors and general LPG accessories."}
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.redflamegas.co.za/atlantic-seaboard#service-refill",
+      "serviceType": "Gas Refill and Delivery",
+      "name": "Gas Refill and Delivery in Atlantic Seaboard",
+      "description": "Same-day free LPG gas refill and delivery to Atlantic Seaboard from the Red Flame Gas Supplier shop in Woodstock. Cylinders from 5 kg to 48 kg, any mainstream brand swapped.",
+      "provider": {
+        "@id": "https://www.redflamegas.co.za/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Atlantic Seaboard, Cape Town"
+        },
+        {
+          "@type": "Place",
+          "name": "Sea Point"
+        },
+        {
+          "@type": "Place",
+          "name": "Bantry Bay"
+        },
+        {
+          "@type": "Place",
+          "name": "Clifton"
+        },
+        {
+          "@type": "Place",
+          "name": "Camps Bay"
+        },
+        {
+          "@type": "Place",
+          "name": "Fresnaye"
+        },
+        {
+          "@type": "Place",
+          "name": "Three Anchor Bay"
+        },
+        {
+          "@type": "Place",
+          "name": "Mouille Point"
+        },
+        {
+          "@type": "Place",
+          "name": "Green Point"
+        },
+        {
+          "@type": "Place",
+          "name": "Bakoven"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.redflamegas.co.za/atlantic-seaboard#service-installation",
+      "serviceType": "Gas Installation with COC Certification",
+      "name": "Gas Installation with COC (SANS 10087) in Atlantic Seaboard",
+      "description": "LPG gas installations in Atlantic Seaboard built to SANS 10087, with the Gas Certificate of Compliance (COC) issued on the job — for homes, restaurants and guesthouses.",
+      "provider": {
+        "@id": "https://www.redflamegas.co.za/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Atlantic Seaboard, Cape Town"
+        },
+        {
+          "@type": "Place",
+          "name": "Sea Point"
+        },
+        {
+          "@type": "Place",
+          "name": "Bantry Bay"
+        },
+        {
+          "@type": "Place",
+          "name": "Clifton"
+        },
+        {
+          "@type": "Place",
+          "name": "Camps Bay"
+        },
+        {
+          "@type": "Place",
+          "name": "Fresnaye"
+        },
+        {
+          "@type": "Place",
+          "name": "Three Anchor Bay"
+        },
+        {
+          "@type": "Place",
+          "name": "Mouille Point"
+        },
+        {
+          "@type": "Place",
+          "name": "Green Point"
+        },
+        {
+          "@type": "Place",
+          "name": "Bakoven"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.redflamegas.co.za/atlantic-seaboard#service-cages",
+      "serviceType": "Gas Cages Supply and Fitment",
+      "name": "Gas Cages supplied and fitted in Atlantic Seaboard",
+      "description": "Outdoor gas cages supplied and fitted in Atlantic Seaboard — ventilated, lockable and compliant with SANS 10087 for safe cylinder storage.",
+      "provider": {
+        "@id": "https://www.redflamegas.co.za/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Atlantic Seaboard, Cape Town"
+        },
+        {
+          "@type": "Place",
+          "name": "Sea Point"
+        },
+        {
+          "@type": "Place",
+          "name": "Bantry Bay"
+        },
+        {
+          "@type": "Place",
+          "name": "Clifton"
+        },
+        {
+          "@type": "Place",
+          "name": "Camps Bay"
+        },
+        {
+          "@type": "Place",
+          "name": "Fresnaye"
+        },
+        {
+          "@type": "Place",
+          "name": "Three Anchor Bay"
+        },
+        {
+          "@type": "Place",
+          "name": "Mouille Point"
+        },
+        {
+          "@type": "Place",
+          "name": "Green Point"
+        },
+        {
+          "@type": "Place",
+          "name": "Bakoven"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.redflamegas.co.za/atlantic-seaboard#service-products",
+      "serviceType": "General LPG Products",
+      "name": "General LPG products available in Atlantic Seaboard",
+      "description": "Regulators, hoses, fittings, gas detectors and general LPG accessories — in shop in Woodstock or delivered with your refill.",
+      "provider": {
+        "@id": "https://www.redflamegas.co.za/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Atlantic Seaboard, Cape Town"
+        },
+        {
+          "@type": "Place",
+          "name": "Sea Point"
+        },
+        {
+          "@type": "Place",
+          "name": "Bantry Bay"
+        },
+        {
+          "@type": "Place",
+          "name": "Clifton"
+        },
+        {
+          "@type": "Place",
+          "name": "Camps Bay"
+        },
+        {
+          "@type": "Place",
+          "name": "Fresnaye"
+        },
+        {
+          "@type": "Place",
+          "name": "Three Anchor Bay"
+        },
+        {
+          "@type": "Place",
+          "name": "Mouille Point"
+        },
+        {
+          "@type": "Place",
+          "name": "Green Point"
+        },
+        {
+          "@type": "Place",
+          "name": "Bakoven"
+        }
+      ]
+    }
   ]
 }
 </script>
@@ -68,6 +263,46 @@
   "itemListElement": [
     {"@type":"ListItem","position":1,"name":"Home","item":"https://www.redflamegas.co.za/"},
     {"@type":"ListItem","position":2,"name":"Gas Refill Atlantic Seaboard","item":"https://www.redflamegas.co.za/atlantic-seaboard"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How fast is gas delivery to Atlantic Seaboard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Same-day delivery to Atlantic Seaboard is standard if you WhatsApp your order before mid-afternoon. We send a live ETA from our Woodstock shop after you message your address and cylinder size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is gas delivery to Atlantic Seaboard free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Delivery from our Woodstock shop to Atlantic Seaboard is free. No minimum order on refills, no hidden fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you do gas installations and issue a COC in Atlantic Seaboard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We do LPG gas installations in Atlantic Seaboard built to SANS 10087 and issue the Gas Certificate of Compliance (COC) on the job — for homes, restaurants and guesthouses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which cylinder sizes can I get refilled or exchanged in Atlantic Seaboard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From 5 kg upwards — 5, 9, 14, 19 and 48 kg. Any mainstream LPG brand swapped, same-day to Atlantic Seaboard from our Woodstock shop."
+      }
+    }
   ]
 }
 </script>
@@ -214,13 +449,4 @@
   <div class="wrap footer-grid">
     <div><strong style="color:#fff;font-size:16px;letter-spacing:.5px">Red Flame Gas Supplier</strong><p style="margin:8px 0 0">Gas shop and free gas delivery — Woodstock, Higgovale, Pinelands, Rondebosch, Atlantic Seaboard. 170 Victoria Road, Woodstock, 7925.</p></div>
     <div><div style="color:#fff;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:13px;margin-bottom:8px">Areas</div><a href="woodstock">Woodstock</a><br><a href="higgovale">Higgovale</a><br><a href="oranjezicht">Oranjezicht</a><br><a href="pinelands">Pinelands</a><br><a href="rondebosch">Rondebosch</a><br><a href="newlands">Newlands</a><br><a href="claremont">Claremont</a><br><a href="atlantic-seaboard">Atlantic Seaboard</a><br><a href="edgemead">Edgemead</a></div>
-    <div><div style="color:#fff;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:13px;margin-bottom:8px">Contact</div><a href="tel:+27645109495">064 510 9495</a><br><a href="https://wa.me/27645109495" target="_blank" rel="noopener">WhatsApp</a><br><a href="mailto:info@redflamegas.co.za">info@redflamegas.co.za</a><br><a href="https://www.facebook.com/RedFlameLPGas/" target="_blank" rel="noopener">Facebook</a></div>
-  </div>
-  <div class="wrap legal">© <span id="y"></span> Red Flame Gas Supplier · Installations to SANS 10087.</div>
-</footer>
-
-<a class="float-wa" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27m%20on%20the%20Atlantic%20Seaboard%20and%20need%20gas." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
-<div class="sticky-call"><a href="tel:+27645109495">☎ Call</a><a class="wa" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27m%20on%20the%20Atlantic%20Seaboard%20and%20need%20gas." target="_blank" rel="noopener">💬 Order Now</a></div>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-</body>
-</html>
+    <div><div style="color:#fff;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:13px;margin-bottom:8px">Contact</div><a href="tel:+27645109495">064 510 9495</a><br><a href="https://wa.me/27645109495" target="_blank" rel="noopener">WhatsApp</a><br><a href="mailto:info@redflamegas.co.za">info@redflamegas.co.za</a><br><a href="https://www.facebook.com/RedFlameLPGas/" target="_blank" rel="noopener">Facebook</a

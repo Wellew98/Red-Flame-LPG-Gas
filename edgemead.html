@@ -3,6 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Analytics (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0OQH07YRP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B0OQH07YRP');
+  // Lead conversion tracking: fire event on every WhatsApp / phone-call click
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('tel:') === 0) gtag('event', 'lead_call');
+    else if (href.indexOf('wa.me/') !== -1) gtag('event', 'lead_whatsapp');
+  });
+</script>
 <title>Gas Installation & Refill Edgemead — Free Same-Day | Red Flame Gas</title>
 <meta name="description" content="Gas installation & refill in Edgemead — Red Flame Gas. Free same-day LPG delivery to Edgemead Drive, Bosmansdam, Letchworth. Cylinders from 5 kg, installations with COC (SANS 10087). WhatsApp 064 510 9495.">
 <meta name="keywords" content="edgemead gas installation, gas installers edgemead, gas refill edgemead, gas delivery edgemead, lpg edgemead cape town, gas northern suburbs, gas cages edgemead, gas coc edgemead, gas shop edgemead, edgemead drive gas, gas bosmansdam">
@@ -28,27 +44,64 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://www.redflamegas.co.za/#business",
-  "name": "Red Flame Gas Supplier — Edgemead Delivery & Installation",
-  "alternateName": ["Red Flame Gas Suppliers", "Red Flame Gas", "Redflame Gas Supplier"],
-  "description": "Free same-day LPG gas delivery and gas installation with COC certification in Edgemead, Cape Town Northern Suburbs. Refills from 5 kg from Red Flame Gas Supplier on Victoria Road, Woodstock. Family-home gas hob and braai installations to SANS 10087, gas cages, all general LPG products.",
-  "image": "https://www.redflamegas.co.za/Background.webp",
-  "sameAs": ["https://www.facebook.com/RedFlameLPGas/"],
-  "url": "https://www.redflamegas.co.za/edgemead",
-  "telephone": "+27645109495",
-  "email": "info@redflamegas.co.za",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "170 Victoria Road",
-    "addressLocality": "Woodstock",
-    "addressRegion": "Western Cape",
-    "postalCode": "7925",
-    "addressCountry": "ZA"
-  },
-  "areaServed": {"@type":"Place","name":"Edgemead, Cape Town"},
-  "openingHoursSpecification": [{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}],
-  "priceRange":"R"
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.redflamegas.co.za/edgemead#service-refill",
+      "serviceType": "Gas Refill and Delivery",
+      "name": "Gas Refill and Delivery in Edgemead",
+      "description": "Same-day free LPG gas refill and delivery to Edgemead from the Red Flame Gas Supplier shop in Woodstock. Cylinders from 5 kg to 48 kg, any mainstream brand swapped.",
+      "provider": {
+        "@id": "https://www.redflamegas.co.za/#business"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Edgemead, Cape Town"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.redflamegas.co.za/edgemead#service-installation",
+      "serviceType": "Gas Installation with COC Certification",
+      "name": "Gas Installation with COC (SANS 10087) in Edgemead",
+      "description": "LPG gas installations in Edgemead built to SANS 10087, with the Gas Certificate of Compliance (COC) issued on the job — for homes, restaurants and guesthouses.",
+      "provider": {
+        "@id": "https://www.redflamegas.co.za/#business"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Edgemead, Cape Town"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.redflamegas.co.za/edgemead#service-cages",
+      "serviceType": "Gas Cages Supply and Fitment",
+      "name": "Gas Cages supplied and fitted in Edgemead",
+      "description": "Outdoor gas cages supplied and fitted in Edgemead — ventilated, lockable and compliant with SANS 10087 for safe cylinder storage.",
+      "provider": {
+        "@id": "https://www.redflamegas.co.za/#business"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Edgemead, Cape Town"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.redflamegas.co.za/edgemead#service-products",
+      "serviceType": "General LPG Products",
+      "name": "General LPG products available in Edgemead",
+      "description": "Regulators, hoses, fittings, gas detectors and general LPG accessories — in shop in Woodstock or delivered with your refill.",
+      "provider": {
+        "@id": "https://www.redflamegas.co.za/#business"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Edgemead, Cape Town"
+      }
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -58,6 +111,46 @@
   "itemListElement": [
     {"@type":"ListItem","position":1,"name":"Home","item":"https://www.redflamegas.co.za/"},
     {"@type":"ListItem","position":2,"name":"Gas Installation & Refill Edgemead","item":"https://www.redflamegas.co.za/edgemead"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How fast is gas delivery to Edgemead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Same-day delivery to Edgemead is standard if you WhatsApp your order before mid-afternoon. We send a live ETA from our Woodstock shop after you message your address and cylinder size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is gas delivery to Edgemead free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Delivery from our Woodstock shop to Edgemead is free. No minimum order on refills, no hidden fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you do gas installations and issue a COC in Edgemead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We do LPG gas installations in Edgemead built to SANS 10087 and issue the Gas Certificate of Compliance (COC) on the job — for homes, restaurants and guesthouses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which cylinder sizes can I get refilled or exchanged in Edgemead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From 5 kg upwards — 5, 9, 14, 19 and 48 kg. Any mainstream LPG brand swapped, same-day to Edgemead from our Woodstock shop."
+      }
+    }
   ]
 }
 </script>
@@ -321,15 +414,4 @@
       <a href="tel:+27645109495">064 510 9495</a><br>
       <a href="https://wa.me/27645109495" target="_blank" rel="noopener">WhatsApp</a><br>
       <a href="mailto:info@redflamegas.co.za">info@redflamegas.co.za</a><br>
-      <a href="https://www.facebook.com/RedFlameLPGas/" target="_blank" rel="noopener">Facebook</a>
-    </div>
-  </div>
-  <div class="wrap legal">© <span id="y"></span> Red Flame Gas Supplier · Installations to SANS 10087.</div>
-</footer>
-
-<a class="float-wa" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27m%20in%20Edgemead%20and%20need%20gas." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
-<div class="sticky-call"><a href="tel:+27645109495">☎ Call</a><a class="wa" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27m%20in%20Edgemead%20and%20need%20gas." target="_blank" rel="noopener">💬 Order Now</a></div>
-
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-</body>
-</html>
+      <a href="https://www.facebook.com/RedFlameLPGas/" target="_blank

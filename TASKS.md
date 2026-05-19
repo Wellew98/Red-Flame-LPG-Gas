@@ -1,6 +1,6 @@
 # Red Flame Gas — SEO TODO
 
-Last updated: 2026-05-18 · Lead target: 30–60 leads/month by August 2026
+Last updated: 2026-05-19 · Lead target: 30–60 leads/month by August 2026
 
 Reference docs in this folder:
 - `SEO_AUDIT_2026-05-18.md` — full deep audit with prioritized findings
@@ -58,10 +58,10 @@ Reference docs in this folder:
 
 ## ✍️ Next-pass on-site work (can be done with Claude, ~1 hour)
 
-- [ ] Differentiate the 9 suburb meta descriptions so they don't all read like a template (~45 min)
-- [ ] Add a Pinelands-specific paragraph + photo to capitalize on the +165% impression surge
-- [ ] Tighten topbar text from "Mon to Sat" → "Mon–Fri 08:00–18:00 · Sat 08:00–12:00" (clearer to visitors, matches GBP exactly)
-- [ ] Add an LPG-explainer paragraph to homepage to better intercept the broad "lpg gas" query (9 imp)
+- [x] Differentiate the suburb meta descriptions — done 2026-05-19. Audit showed only 3 were actually templated; rewrote Claremont, Pinelands, Rondebosch metas with local hooks (Cavendish, Forest Drive/Howard Centre, UCT/Main Road/Common). The other 6 were already distinct and left alone. Pinelands and Rondebosch og:description also refreshed.
+- [ ] Add a Pinelands-specific paragraph + photo — **skipped** on 2026-05-19. Audit showed the Pinelands page is already content-rich (Why Pinelands Residents Use Red Flame section, 4 local cards, 11+ named streets). Adding more copy would be padding. The photo half is a real-world user action.
+- [x] Tighten topbar text from "Mon to Sat" → "Mon–Fri 08:00–18:00 · Sat 08:00–12:00" — done 2026-05-19 across all 10 HTML files (kept "· 170 Victoria Rd, Woodstock" after the hours; CSS flex-wraps cleanly on mobile).
+- [x] Add an LPG-explainer FAQ entry to homepage — done 2026-05-19. Inserted "What does LPG stand for?" as FAQ #3 on index.html, in both the visible `<details>` block and the FAQPage JSON-LD schema. Answer hits LPG 5× and retains SANS 10087 / NERSA keyword density.
 
 ---
 

@@ -1,23 +1,19 @@
 # Red Flame Gas — SEO TODO
 
-Last updated: 2026-05-21 · Lead target: 30–60 leads/month by August 2026
+Last updated: 2026-05-22 · Lead target: 30–60 leads/month by August 2026
 
 Reference docs in this folder:
 
-- `SEO_AUDIT_2026-05-21.md` — current audit, priorities and full context
+- `SEO_AUDIT_2026-05-22.md` — current audit, priorities and full context
 - `RESULTS_PLAN_2026-05-12.md` — the 30/60/90 lead plan
 
 ---
 
-## 🚀 P0 — Deploy the repaired site (today, user)
+## ✅ P0 — Deploy the repaired site — DONE 2026-05-22
 
-All 10 HTML files were truncated/corrupted and have been rebuilt. The fix only exists on your Desktop until you push it — do this before anything else.
+All 10 repaired files deployed and verified live — woodstock, higgovale and the homepage render complete (footer, floating WhatsApp button and mobile sticky call bar present; pages end cleanly). Side benefit: with the files whole again, the Cloudflare beacon no longer injects mid-element.
 
-- [ ] Push all 10 HTML files to GitHub in one commit (Cloudflare Pages auto-builds)
-- [ ] Wait 2–3 min for the build, then smoke-test in incognito — view source on each page and confirm it ends with `</html>`:
-  - [ ] `redflamegas.co.za/` — homepage
-  - [ ] `redflamegas.co.za/woodstock` and `/higgovale` — these were confirmed broken; check the footer, floating WhatsApp button and mobile sticky call bar all appear
-- [ ] After the build is live, URL-inspect 2–3 clean suburb URLs in GSC → Request Indexing, so Google recrawls the *corrected* pages (your earlier indexing requests + sitemap resubmit happened before this fix)
+- [ ] Follow-up: URL-inspect 2–3 clean suburb URLs in GSC → Request Indexing, so Google recrawls the corrected pages
 
 ## 📊 Finish GA4 analytics (user, this week)
 
@@ -70,4 +66,4 @@ You've started asking customers. Turn it into a repeatable habit:
 
 ---
 
-*Removed as completed: file repair + 2026-05-21 audit, breadcrumb fixes, meta differentiation, GA4 install, suburb schema rebuild, homepage "8-points" content; GBP profile info; GBP review-asking started; GSC new validation + indexing requests + sitemap resubmit.*
+*Removed as completed: file repair + 2026-05-22 audit, breadcrumb fixes, meta differentiation, GA4 install, suburb schema rebuild, homepage "8-points" content; GBP profile info; GBP review-asking started; GSC new validation + indexing requests + sitemap resubmit.*

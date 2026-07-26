@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Preload hero LCP image so it is discovered before CSS parses -->
+<link rel="preload" as="image" href="Background.webp" type="image/webp" fetchpriority="high">
 <!-- Google Analytics (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M53WZ17EYB"></script>
 <script>
@@ -250,8 +252,8 @@
   .btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(0,0,0,.12)}
   .btn-red{background:#C21A1B;color:#fff}
   .btn-red:hover{background:#a30000}
-  .btn-whatsapp{background:#25D366;color:#fff}
-  .btn-whatsapp:hover{background:#1fb855}
+  .btn-whatsapp{background:#1a7d3f;color:#fff}
+  .btn-whatsapp:hover{background:#15672f}
   .btn-outline{background:#fff;color:#C21A1B;border:2px solid #C21A1B}
   .btn-outline:hover{background:#fff4f4}
   .btn-dark{background:#111;color:#fff}
@@ -325,11 +327,11 @@
   .cyl-img::after{content:"";position:absolute;left:18px;right:18px;bottom:10px;height:1px;background:#dcdcdc}
   .cyl-img img{width:auto;max-width:100%;height:var(--cyl-h,100%);object-fit:contain;object-position:bottom center;position:relative;z-index:1}
   .cyl h3{margin:0 0 4px;font-size:18px;font-weight:900;letter-spacing:-.2px}
-  .cyl .kind{color:#888;font-size:12px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:10px}
-  .cyl .price-note{color:#777;font-size:12px;margin-bottom:14px}
-  .cyl .btn-wa-sm{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#25D366;color:#fff;padding:12px 14px;border-radius:10px;font-weight:800;font-size:14px;text-decoration:none;transition:background .15s ease;margin-top:auto}
-  .cyl .btn-wa-sm:hover{background:#1fb855}
-  .shop-note{color:#777;font-size:13.5px;margin-top:18px;max-width:760px}
+  .cyl .kind{color:#616161;font-size:12px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:10px}
+  .cyl .price-note{color:#616161;font-size:12px;margin-bottom:14px}
+  .cyl .btn-wa-sm{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#1a7d3f;color:#fff;padding:12px 14px;border-radius:10px;font-weight:800;font-size:14px;text-decoration:none;transition:background .15s ease;margin-top:auto}
+  .cyl .btn-wa-sm:hover{background:#15672f}
+  .shop-note{color:#616161;font-size:13.5px;margin-top:18px;max-width:760px}
 
   /* Order strip */
   .order{background:#fff8f8;border-top:1px solid #f2dede;border-bottom:1px solid #f2dede;padding:48px 0;text-align:center}
@@ -373,7 +375,7 @@
   .contact-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid #f2f2f2}
   .contact-row:last-child{border-bottom:0}
   .contact-row .ico{width:40px;height:40px;flex-shrink:0;background:#fff0f0;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#C21A1B;font-weight:800;font-size:18px}
-  .contact-row .k{font-size:11.5px;color:#888;text-transform:uppercase;letter-spacing:1.2px;font-weight:700}
+  .contact-row .k{font-size:11.5px;color:#616161;text-transform:uppercase;letter-spacing:1.2px;font-weight:700}
   .contact-row .v{font-size:15.5px;font-weight:700;color:#111;margin-top:3px}
   .contact-row a.v{color:#C21A1B;text-decoration:none}
   .contact-row a.v:hover{text-decoration:underline}
@@ -391,20 +393,20 @@
   footer{background:#0d0d0d;color:#aaa;padding:44px 0 28px;font-size:14px}
   footer .cols{display:grid;grid-template-columns:1fr;gap:28px}
   @media(min-width:760px){footer .cols{grid-template-columns:2fr 1fr 1fr}}
-  footer h4{color:#fff;margin:0 0 12px;font-size:13px;text-transform:uppercase;letter-spacing:1.8px;font-weight:800}
+  footer h3{color:#fff;margin:0 0 12px;font-size:13px;text-transform:uppercase;letter-spacing:1.8px;font-weight:800}
   footer a{color:#aaa;text-decoration:none;display:block;padding:3px 0}
   footer a:hover{color:#fff}
-  .legal{margin-top:30px;padding-top:20px;border-top:1px solid #222;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:#666}
+  .legal{margin-top:30px;padding-top:20px;border-top:1px solid #222;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:#9a9a9a}
 
   /* Floating WhatsApp */
-  .float-wa{position:fixed;bottom:20px;right:20px;width:58px;height:58px;background:#25D366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(37,211,102,.45);z-index:60;text-decoration:none;font-size:28px;transition:transform .15s ease}
+  .float-wa{position:fixed;bottom:20px;right:20px;width:58px;height:58px;background:#1a7d3f;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(26,125,63,.45);z-index:60;text-decoration:none;font-size:28px;transition:transform .15s ease}
   .float-wa:hover{transform:scale(1.06)}
   @media(max-width:859px){.float-wa{bottom:72px}}
 
   /* Sticky mobile call bar */
   .sticky-call{position:fixed;bottom:0;left:0;right:0;background:#C21A1B;color:#fff;display:flex;z-index:55;box-shadow:0 -4px 20px rgba(0,0,0,.2)}
   .sticky-call a{flex:1;color:#fff;text-decoration:none;text-align:center;padding:15px;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;gap:8px;letter-spacing:.3px}
-  .sticky-call a.wa{background:#25D366}
+  .sticky-call a.wa{background:#1a7d3f}
   @media(min-width:860px){.sticky-call{display:none}}
   @media(max-width:859px){body{padding-bottom:58px}}
 
@@ -446,7 +448,7 @@
 <div class="topbar">
   <div class="topbar-inner">
     <div>
-      <a href="tel:+27645109495" aria-label="Call Red Flame">☎ 064 510 9495</a>
+      <a href="tel:+27645109495" aria-label="Call Red Flame on 064 510 9495">☎ 064 510 9495</a>
       <a href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27d%20like%20to%20order%20gas." target="_blank" rel="noopener" aria-label="WhatsApp Red Flame">💬 WhatsApp</a>
     </div>
     <div class="topbar-right">Mon–Fri 08:00–18:00 · Sat 08:00–12:00 · Victoria Rd, Woodstock</div>
@@ -456,7 +458,7 @@
 <!-- Nav -->
 <nav class="main">
   <div class="wrap nav-inner">
-    <a class="brand" href="#top" aria-label="Red Flame Gas Supplier home">
+    <a class="brand" href="#top">
       <img class="flame" src="flame-icon.webp" alt="" width="44" height="44" decoding="async">
       <span>
         <div class="name">Red Flame</div>
@@ -474,6 +476,7 @@
   </div>
 </nav>
 
+<main id="main">
 <!-- Hero -->
 <header id="top" class="hero">
   <div class="hero-inner">
@@ -555,7 +558,7 @@
         <h3>5 kg LPG Gas Cylinder</h3>
         <div class="kind">Refill · Any Brand Swapped</div>
         <div class="price-note">Free delivery</div>
-        <a class="btn-wa-sm" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27d%20like%20to%20order%20a%205%20kg%20gas%20refill.%20My%20delivery%20address%20is%3A%20" target="_blank" rel="noopener" aria-label="Order 5 kg gas refill on WhatsApp">💬 Order on WhatsApp</a>
+        <a class="btn-wa-sm" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27d%20like%20to%20order%20a%205%20kg%20gas%20refill.%20My%20delivery%20address%20is%3A%20" target="_blank" rel="noopener" aria-label="Order on WhatsApp — 5 kg gas refill">💬 Order on WhatsApp</a>
       </article>
 
       <article class="cyl">
@@ -563,7 +566,7 @@
         <h3>9 kg LPG Gas Cylinder</h3>
         <div class="kind">Refill · Any Brand Swapped</div>
         <div class="price-note">Free delivery</div>
-        <a class="btn-wa-sm" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27d%20like%20to%20order%20a%209%20kg%20gas%20refill.%20My%20delivery%20address%20is%3A%20" target="_blank" rel="noopener" aria-label="Order 9 kg gas refill on WhatsApp">💬 Order on WhatsApp</a>
+        <a class="btn-wa-sm" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27d%20like%20to%20order%20a%209%20kg%20gas%20refill.%20My%20delivery%20address%20is%3A%20" target="_blank" rel="noopener" aria-label="Order on WhatsApp — 9 kg gas refill">💬 Order on WhatsApp</a>
       </article>
 
       <article class="cyl">
@@ -571,7 +574,7 @@
         <h3>14 kg LPG Gas Cylinder</h3>
         <div class="kind">Refill · Any Brand Swapped</div>
         <div class="price-note">Free delivery</div>
-        <a class="btn-wa-sm" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27d%20like%20to%20order%20a%2014%20kg%20gas%20refill.%20My%20delivery%20address%20is%3A%20" target="_blank" rel="noopener" aria-label="Order 14 kg gas refill on WhatsApp">💬 Order on WhatsApp</a>
+        <a class="btn-wa-sm" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27d%20like%20to%20order%20a%2014%20kg%20gas%20refill.%20My%20delivery%20address%20is%3A%20" target="_blank" rel="noopener" aria-label="Order on WhatsApp — 14 kg gas refill">💬 Order on WhatsApp</a>
       </article>
 
       <article class="cyl">
@@ -579,7 +582,7 @@
         <h3>19 kg LPG Gas Cylinder</h3>
         <div class="kind">Refill · Any Brand Swapped</div>
         <div class="price-note">Free delivery</div>
-        <a class="btn-wa-sm" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27d%20like%20to%20order%20a%2019%20kg%20gas%20refill.%20My%20delivery%20address%20is%3A%20" target="_blank" rel="noopener" aria-label="Order 19 kg gas refill on WhatsApp">💬 Order on WhatsApp</a>
+        <a class="btn-wa-sm" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27d%20like%20to%20order%20a%2019%20kg%20gas%20refill.%20My%20delivery%20address%20is%3A%20" target="_blank" rel="noopener" aria-label="Order on WhatsApp — 19 kg gas refill">💬 Order on WhatsApp</a>
       </article>
 
       <article class="cyl">
@@ -587,7 +590,7 @@
         <h3>48 kg LPG Gas Cylinder</h3>
         <div class="kind">Refill · Commercial Use</div>
         <div class="price-note">Free delivery</div>
-        <a class="btn-wa-sm" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27d%20like%20to%20order%20a%2048%20kg%20gas%20refill.%20My%20delivery%20address%20is%3A%20" target="_blank" rel="noopener" aria-label="Order 48 kg gas refill on WhatsApp">💬 Order on WhatsApp</a>
+        <a class="btn-wa-sm" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27d%20like%20to%20order%20a%2048%20kg%20gas%20refill.%20My%20delivery%20address%20is%3A%20" target="_blank" rel="noopener" aria-label="Order on WhatsApp — 48 kg gas refill">💬 Order on WhatsApp</a>
       </article>
     </div>
 
@@ -833,9 +836,10 @@
         <a class="btn btn-red" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27d%20like%20a%20quote%20for%20a%20gas%20installation%20and%20COC." target="_blank" rel="noopener">Get an Installation Quote</a>
       </div>
     </div>
-    <div class="install-img" role="img" aria-label="Bosch gas hob installation by Red Flame Gas Supplier in Cape Town with all four burners lit." style="background-image:url('544819188_786612267079797_3701538092182089470_n.jpeg')"></div>
+    <div class="install-img" role="img" aria-label="Bosch gas hob installation by Red Flame Gas Supplier in Cape Town with all four burners lit." style="background-image:url('gas-installation-cape-town.webp')"></div>
   </div>
 </section>
+</main>
 
 <!-- Footer -->
 <footer>
@@ -846,10 +850,10 @@
         <strong style="color:#fff;font-size:16px;letter-spacing:.5px">Red Flame Gas Supplier</strong>
       </div>
       <p style="margin:0 0 8px">Gas shop and free gas delivery from our Woodstock base. LPG refills from 5 kg, gas installations with COC (SANS 10087), gas cages and all general LPG products, focused on Woodstock, Higgovale, Pinelands, Rondebosch, Atlantic Seaboard, Claremont and the wider Cape Town City Bowl.</p>
-      <p style="margin:6px 0 0;color:#666;font-size:12px">170 Victoria Road, Woodstock, Cape Town, 7925</p>
+      <p style="margin:6px 0 0;color:#9a9a9a;font-size:12px">170 Victoria Road, Woodstock, Cape Town, 7925</p>
     </div>
     <div>
-      <h4>Areas</h4>
+      <h3>Areas</h3>
       <a href="woodstock">Woodstock</a>
       <a href="higgovale">Higgovale</a>
       <a href="oranjezicht">Oranjezicht</a>
@@ -861,12 +865,12 @@
       <a href="edgemead">Edgemead</a>
     </div>
     <div>
-      <h4>Contact</h4>
+      <h3>Contact</h3>
       <a href="https://wa.me/27645109495" target="_blank" rel="noopener">WhatsApp 064 510 9495</a>
       <a href="tel:+27645109495">Call 064 510 9495</a>
       <a href="mailto:info@redflamegas.co.za">info@redflamegas.co.za</a>
       <a href="https://www.facebook.com/RedFlameLPGas/" target="_blank" rel="noopener">Facebook</a>
-      <div style="margin-top:10px;color:#666;font-size:13px">Mon-Fri 08:00–18:00 · Sat 08:00–12:00</div>
+      <div style="margin-top:10px;color:#9a9a9a;font-size:13px">Mon-Fri 08:00–18:00 · Sat 08:00–12:00</div>
     </div>
   </div>
   <div class="wrap legal">

@@ -36,3 +36,7 @@ desktop.ini
 # ALL internal material: docs, customer data, ad creatives, source assets, tools.
 # Nothing in here may ever reach GitHub / the live site.
 _internal/
+
+# Internal project brief for Claude - do not publish to the public repo/site
+CLAUDE.md
+AGENTS.md

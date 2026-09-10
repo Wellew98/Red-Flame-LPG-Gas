@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preload" as="image" href="Background.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="gas-repair-tools-cape-town.webp" type="image/webp" fetchpriority="high">
 <!-- Google Analytics (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M53WZ17EYB"></script>
 <script>
@@ -26,7 +26,7 @@
 <link rel="canonical" href="https://www.redflamegas.co.za/gas-geyser-repairs-cape-town">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="red-flame-favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="red-flame-android-192.png">
 <link rel="icon" type="image/png" sizes="16x16" href="red-flame-favicon-16.png">
@@ -57,7 +57,7 @@
         "@type": "OfferCatalog",
         "name": "Gas Geyser Repair Pricing Cape Town",
         "itemListElement": [
-          { "@type": "Offer", "priceCurrency": "ZAR", "price": "750", "description": "Gas geyser callout and fault diagnosis in Cape Town, including labour", "availability": "https://schema.org/InStock" }
+          { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "ZAR", "minPrice": "750", "valueAddedTaxIncluded": true }, "description": "Gas geyser callout and fault diagnosis in Cape Town, including labour. Starting price. Parts and remedial repair are quoted on site once the fault is identified." }
         ]
       }
     }
@@ -199,6 +199,140 @@
   .sticky-call a.wa{background:#1a7d3f}
   @media(min-width:860px){.sticky-call{display:none}}
   @media(max-width:859px){body{padding-bottom:58px}}
+  /* ===== Installations visual system ===== */
+  :root{
+    --steel:#1F252B;--steel-2:#2A323A;--galv:#C3CACE;--paper:#F1F3F2;
+    --flame:#C21A1B;--cyl:#E8541F;--ink:#12171B;--line:#DFE4E3;
+  }
+  .disp{font-family:"Archivo","Montserrat",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+
+  /* Hero: copy left, evidence photo bleeding right */
+  .ihero{background:var(--steel);color:#fff;overflow:hidden}
+  .ihero-grid{display:grid;grid-template-columns:1fr}
+  @media(min-width:900px){.ihero-grid{grid-template-columns:1fr 1fr;align-items:stretch}}
+  .ihero-copy{padding:54px 22px 50px}
+  @media(min-width:900px){.ihero-copy{padding:88px 52px 88px max(22px,calc(50vw - 518px));align-self:center}}
+  .ihero h1{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:clamp(33px,4.5vw,53px);line-height:1.03;letter-spacing:-.025em;font-weight:800;margin:0 0 20px;color:#fff;text-transform:none;max-width:15ch}
+  .ihero-lede{color:#B4BFC6;font-size:17px;line-height:1.62;margin:0 0 30px;max-width:50ch}
+  .ihero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .ihero-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px 26px;margin:36px 0 0;padding-top:24px;border-top:1px solid rgba(195,202,206,.2);max-width:460px}
+  .ihero-facts div{min-width:0}
+  .ihero-facts dt{font-size:13px;color:#8B98A1;font-weight:500;margin:0 0 3px}
+  .ihero-facts dd{margin:0;font-weight:700;font-size:15px;color:#fff;font-family:"Archivo","Montserrat",Arial,sans-serif}
+  .ihero-photo{position:relative;min-height:300px;background:var(--steel-2)}
+  @media(min-width:900px){.ihero-photo{min-height:100%}}
+  .ihero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 42%;min-height:300px}
+  .ihero-cap{position:absolute;left:0;right:0;bottom:0;padding:26px 22px 16px;font-size:12.5px;line-height:1.45;color:#D7DDE1;background:linear-gradient(180deg,rgba(20,25,30,0) 0%,rgba(20,25,30,.82) 62%)}
+
+  /* Job grid: featured jobs carry evidence, the rest are rate lines */
+  .jobs{display:grid;grid-template-columns:1fr;gap:20px;margin-top:34px}
+  @media(min-width:820px){.jobs{grid-template-columns:repeat(2,1fr)}}
+  .job{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+  .job-ph{aspect-ratio:1/1;overflow:hidden;background:var(--steel)}
+  .job-ph img{width:100%;height:100%;object-fit:cover;object-position:50% 42%}
+  .job-body{padding:24px 24px 26px}
+  .job h3{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:21px;font-weight:800;letter-spacing:-.02em;margin:0 0 10px;color:var(--ink)}
+  .job p{margin:12px 0 0;color:#525C60;font-size:14.5px;line-height:1.6}
+  .job-price{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:15px;font-weight:700;color:var(--cyl);letter-spacing:-.01em}
+  .job-more{display:inline-block;margin-top:16px;color:var(--flame);font-weight:700;font-size:14px;text-decoration:none;border-bottom:2px solid rgba(194,26,27,.25);padding-bottom:2px}
+  .job-more:hover{border-bottom-color:var(--flame)}
+  .plate{display:inline-flex;align-items:baseline;gap:9px;background:var(--steel);padding:8px 13px}
+  .plate .k{font-size:12px;color:#93A0A8;font-weight:500}
+  .plate .v{font-size:13.5px;font-weight:700;color:#fff;font-family:"Archivo","Montserrat",Arial,sans-serif}
+
+  /* Compact rate lines for jobs without their own photo */
+  .rates{margin-top:20px;border-top:1px solid var(--line)}
+  .rate{display:grid;grid-template-columns:1fr;gap:7px;padding:20px 2px;border-bottom:1px solid var(--line)}
+  @media(min-width:760px){.rate{grid-template-columns:200px 1fr 118px;gap:0 26px;align-items:baseline}}
+  .rate .n{font-family:"Archivo","Montserrat",Arial,sans-serif;font-weight:700;font-size:17px;letter-spacing:-.015em;color:var(--ink)}
+  .rate .d{color:#5C6669;font-size:14.5px;line-height:1.55}
+  .rate .f{font-family:"Archivo","Montserrat",Arial,sans-serif;font-weight:700;font-size:15px;color:var(--cyl)}
+  @media(min-width:760px){.rate .f{text-align:right}}
+
+  /* Dark band for the COC sequence */
+  .band{background:var(--steel);color:#fff;padding:64px 0}
+  .band h2{font-family:"Archivo","Montserrat",Arial,sans-serif;color:#fff;font-size:clamp(26px,3.1vw,38px);font-weight:800;letter-spacing:-.025em;line-height:1.1;text-transform:none;max-width:19ch;margin:0 0 16px}
+  .band .lede{color:#AFBAC1;font-size:16.5px;line-height:1.65;max-width:62ch;margin:0}
+  .steps{display:grid;grid-template-columns:1fr;gap:1px;margin-top:44px;background:rgba(195,202,206,.18);border:1px solid rgba(195,202,206,.18)}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(4,1fr)}}
+  .step{background:var(--steel);padding:24px 22px 26px}
+  .step .num{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:13px;font-weight:700;color:var(--cyl);margin-bottom:12px}
+  .step h3{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:16.5px;font-weight:700;color:#fff;margin:0 0 8px;letter-spacing:-.015em}
+  .step p{margin:0;color:#A7B2BA;font-size:14px;line-height:1.55}
+
+  /* Evidence strip */
+  .ev{display:grid;grid-template-columns:1fr;gap:18px;margin-top:30px}
+  @media(min-width:700px){.ev{grid-template-columns:repeat(3,1fr)}}
+  .ev figure{margin:0;background:#fff;border:1px solid var(--line)}
+  .ev .ph{aspect-ratio:3/4;overflow:hidden;background:var(--steel)}
+  .ev .ph img{width:100%;height:100%;object-fit:cover}
+  .ev figcaption{padding:16px 18px 18px;font-size:13.5px;line-height:1.55;color:#525C60}
+  .ev figcaption b{display:block;font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:15px;color:var(--ink);margin-bottom:4px;font-weight:700}
+
+  /* Section heading treatment for installation pages */
+  .ihead{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:clamp(26px,3.1vw,38px);font-weight:800;letter-spacing:-.025em;line-height:1.1;margin:0 0 16px;color:var(--ink);text-transform:none;max-width:20ch}
+  .ilede{color:#525C60;font-size:16.5px;line-height:1.65;max-width:66ch;margin:0}
+  .paper{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+  /* Two-option comparison */
+  .compare{display:grid;grid-template-columns:1fr;gap:18px;margin-top:32px}
+  @media(min-width:760px){.compare{grid-template-columns:1fr 1fr;gap:20px}}
+  .compare .col{background:#fff;border:1px solid var(--line);padding:24px 26px 26px}
+  .compare h3{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:19px;font-weight:800;letter-spacing:-.02em;margin:12px 0 0;color:var(--ink)}
+  .compare p{margin:10px 0 0;color:#525C60;font-size:14.5px;line-height:1.62}
+
+  /* Restyled to match: square, cylinder-orange rule, no pink wash */
+  .callout{margin-top:34px;padding:22px 26px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--cyl);border-radius:0}
+  .callout .t{font-family:"Archivo","Montserrat",Arial,sans-serif;font-weight:800;font-size:17.5px;color:var(--ink);letter-spacing:-.02em}
+  .callout p{color:#525C60;font-size:14.5px;margin:9px 0 0;line-height:1.62}
+  .ptable{border:1px solid var(--line);border-radius:0}
+  .ptable th{background:var(--steel);letter-spacing:.06em}
+  .ptable td:nth-child(2){color:var(--cyl);font-family:"Archivo","Montserrat",Arial,sans-serif}
+  details{border-radius:0;background:#fff;border-color:var(--line)}
+  details[open]{border-color:var(--steel)}
+  details summary{font-family:"Archivo","Montserrat",Arial,sans-serif;font-weight:700;letter-spacing:-.015em}
+  .suburb{border-radius:0;background:#fff;border-color:var(--line)}
+  .svc-link{border-radius:0;background:#fff;border-color:var(--line);font-family:"Archivo","Montserrat",Arial,sans-serif}
+  .order{background:var(--paper);border-color:var(--line)}
+  .install-photo{overflow:hidden;border:1px solid var(--line);margin-top:26px}
+  .install-photo img{width:100%;height:auto;display:block}
+  /* ---- Added for the installation page rebuild ---- */
+  .creds{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .creds-in{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border-left:1px solid var(--line);border-right:1px solid var(--line)}
+  @media(min-width:560px){.creds-in{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:960px){.creds-in{grid-template-columns:repeat(4,1fr)}}
+  .cred{background:var(--paper);padding:22px 24px;display:flex;gap:13px;align-items:flex-start}
+  .cred .tick{flex:none;width:19px;height:19px;margin-top:2px;color:var(--cyl)}
+  .cred b{display:block;font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:15px;font-weight:700;color:var(--ink);letter-spacing:-.015em}
+  .cred span{display:block;color:#5C6669;font-size:13.5px;line-height:1.5;margin-top:4px}
+  .flamebar{display:block;width:100%;height:clamp(110px,15vw,180px);object-fit:cover;object-position:50% 58%}
+  .split{display:grid;grid-template-columns:1fr;gap:26px;align-items:stretch;margin-top:32px}
+  @media(min-width:880px){.split{grid-template-columns:1.4fr .85fr;gap:36px}}
+  .split-ph{position:relative;border:1px solid var(--line);overflow:hidden;background:var(--steel);min-height:320px}
+  .install-photo{border-radius:0;border-color:var(--line)}
+  .split-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .whys{display:grid;grid-template-columns:1fr;gap:1px;margin-top:34px;background:var(--line);border:1px solid var(--line)}
+  @media(min-width:700px){.whys{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1000px){.whys{grid-template-columns:repeat(4,1fr)}}
+  .why{background:#fff;padding:26px 24px 28px}
+  .why h3{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:17px;font-weight:800;letter-spacing:-.02em;margin:0 0 9px;color:var(--ink)}
+  .why p{margin:0;color:#525C60;font-size:14px;line-height:1.6}
+  .brandband{background:var(--steel);padding:52px 0}
+  .brandband h2{font-family:"Archivo","Montserrat",Arial,sans-serif;color:#fff;font-size:clamp(23px,2.6vw,31px);font-weight:800;letter-spacing:-.025em;line-height:1.12;margin:0 0 14px;max-width:22ch}
+  .brandband p{color:#AFBAC1;font-size:15.5px;line-height:1.62;max-width:60ch;margin:0}
+  .brandrow{display:flex;flex-wrap:wrap;align-items:center;gap:30px 52px;margin-top:36px;padding-top:32px;border-top:1px solid rgba(195,202,206,.2)}
+  .brandrow img{height:32px;width:auto;display:block}
+  .brandrow .wordmark{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:25px;font-weight:800;letter-spacing:.055em;color:#fff;line-height:1}
+  .movers{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+  @media(min-width:700px){.movers{grid-template-columns:repeat(2,1fr)}}
+  .movers li{background:#fff;padding:17px 20px;font-size:14px;color:#525C60;line-height:1.55}
+  .movers li b{color:var(--ink);font-weight:700;font-family:"Archivo","Montserrat",Arial,sans-serif}
+  .areas{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .areas a{border:1px solid var(--line);background:#fff;padding:11px 17px;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none}
+  .areas a:hover{border-color:var(--flame);color:var(--flame)}
+  .workshot{border:1px solid var(--line);overflow:hidden;margin-top:30px;background:var(--steel)}
+  .workshot img{width:100%;height:auto;display:block}
+  .workshot figcaption{padding:16px 20px 18px;font-size:13.5px;line-height:1.55;color:#525C60;background:#fff;border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
@@ -233,93 +367,194 @@
 <div class="wrap crumbs"><a href="/">Home</a> &rsaquo; <a href="gas-installation-cape-town">Gas Installation</a> &rsaquo; Gas Geyser Repairs</div>
 
 <main id="main">
-<header class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">SAQCC Registered · Repairs · Servicing</div>
-    <h1>Gas Geyser Repairs and Servicing in <span class="accent">Cape Town</span></h1>
-    <div class="hero-ctas">
-      <a class="btn btn-red btn-lg" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%20need%20a%20GAS%20GEYSER%20REPAIR.%20Suburb%3A%20%0AAppliance%2Fbrand%3A%20%0AFault%3A%20" target="_blank" rel="noopener">Get Help Now</a>
-      <a class="btn btn-outline btn-lg" href="tel:+27645109495">Call 064 510 9495</a>
+<header class="ihero">
+  <div class="ihero-grid">
+    <div class="ihero-copy">
+      <h1>Gas geyser repairs and servicing in Cape Town.</h1>
+      <p class="ihero-lede">No hot water, a flame that will not hold, or water running cold halfway through a shower. We diagnose the fault on site, tell you whether it is the geyser or the cylinder, and quote the repair before starting.</p>
+      <div class="ihero-ctas">
+        <a class="btn btn-red btn-lg" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%20need%20a%20GAS%20GEYSER%20REPAIR.%20Suburb%3A%20%0AAppliance%2Fbrand%3A%20%0AFault%3A%20" target="_blank" rel="noopener">WhatsApp the fault</a>
+        <a class="btn btn-outline btn-lg" href="tel:+27645109495">Call 064 510 9495</a>
+      </div>
+      <dl class="ihero-facts">
+        <div><dt>Registered with</dt><dd>SAQCC Gas</dd></div>
+        <div><dt>Repaired to</dt><dd>SANS 10087</dd></div>
+        <div><dt>Callout and diagnosis</dt><dd>R750</dd></div>
+        <div><dt>Any brand</dt><dd>We repair it</dd></div>
+      </dl>
+    </div>
+    <div class="ihero-photo">
+      <img src="gas-repair-tools-cape-town.webp" alt="Adjustable wrench, pipe wrench and tool roll used by Red Flame Gas Supplier for gas geyser repairs and servicing in Cape Town" width="1200" height="800" fetchpriority="high" decoding="async">
+      <p class="ihero-cap">The kit that comes out on every repair callout. Nothing gets replaced until the fault is confirmed.</p>
     </div>
   </div>
 </header>
 
-<div class="trust-band">
-  <div class="wrap trust-grid">
-    <div class="trust-item"><span class="tick">✓</span> SAQCC Registered</div>
-    <div class="trust-item"><span class="tick">✓</span> 5.0 Star Rated on Google</div>
-    <div class="trust-item"><span class="tick">✓</span> Woodstock Based</div>
-    <div class="trust-item"><span class="tick">✓</span> COC Issued on the Job</div>
-  </div>
-</div>
-
-<section class="block">
-  <div class="wrap">
-    <div class="eyebrow">Common Faults</div>
-    <h2>Common Gas Geyser Faults.</h2>
-    <p class="subhead">If your gas geyser is doing any of these, WhatsApp us the symptom and we'll tell you what it likely is before we come out.</p>
-    <div class="symptom-grid">
-      <div class="symptom">Will not ignite</div>
-      <div class="symptom">Water not hot enough</div>
-      <div class="symptom">Water too hot</div>
-      <div class="symptom">Cuts out mid-shower</div>
-      <div class="symptom">Pilot light keeps going out</div>
-      <div class="symptom">Low water pressure at the tap</div>
-      <div class="symptom">Smell of gas near the unit</div>
-    </div>
-  </div>
-</section>
-
-<section class="block" style="background:#fafafa;border-top:1px solid #efefef;border-bottom:1px solid #efefef">
-  <div class="wrap">
-    <div class="eyebrow">Diagnose First</div>
-    <h2>When It Is the Cylinder, Not the Geyser.</h2>
-    <div class="callout">
-      <div class="t">Check the Cylinder Before You Assume It's Broken</div>
-      <p>A large share of winter "geyser is broken" callouts turn out to be an almost-empty or undersized cylinder, not a fault in the unit at all. Low gas pressure from a near-empty bottle mimics an ignition fault or a geyser that cuts out mid-shower. If your cylinder is 19kg and you're running a geyser plus a hob, or the household has grown since it was sized, a bigger cylinder or a second one on auto-changeover is often the cheaper fix, and it's one we can arrange from the same Woodstock shop as the repair callout.</p>
+<section class="creds">
+  <div class="wrap" style="padding:0">
+    <div class="creds-in">
+      <div class="cred"><svg class="tick" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg><div><b>SANS 10087</b><span>Any repair that touches the gas installation is tested and signed off to the national gas installation standard.</span></div></div>
+      <div class="cred"><svg class="tick" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg><div><b>SAQCC registered</b><span>The work is done by a registered gas practitioner, not a general handyman.</span></div></div>
+      <div class="cred"><svg class="tick" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg><div><b>COC where it's needed</b><span>We issue a new Certificate of Compliance on the visit if the repair changes the installation.</span></div></div>
+      <div class="cred"><svg class="tick" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg><div><b>Any brand repaired</b><span>We service any standard LPG gas geyser, regardless of who installed it.</span></div></div>
     </div>
   </div>
 </section>
 
 <section class="block">
   <div class="wrap">
-    <div class="eyebrow">Servicing</div>
-    <h2>Annual Servicing.</h2>
-    <p class="subhead">A yearly service checks the burner and ignition assembly, the flue, every gas connection and the water pressure feeding the unit, catching a small fault before it becomes a mid-winter breakdown. Many household insurance policies require an annual service on a gas appliance to keep cover valid, worth checking your policy wording if you haven't had one done.</p>
+    <h2 class="ihead">What a gas geyser repair involves.</h2>
+    <p class="ilede">Checking the gas supply and cylinder first, since low pressure from a near-empty bottle mimics half the faults we get called out for. Then the burner and ignition assembly, the gas and water connections, the flue, and the water pressure feeding the unit. Once the fault is confirmed we quote the part or the fix before touching anything, so you approve the cost before we proceed. A like-for-like repair is usually done in one visit.</p>
+    <div class="install-photo">
+      <img src="gas-line-connection-cape-town.webp" alt="Gas union and isolation valve being checked by hand during a gas geyser repair callout" loading="lazy" width="1200" height="800">
+    </div>
   </div>
 </section>
 
-<section class="block" style="background:#fafafa;border-top:1px solid #efefef;border-bottom:1px solid #efefef">
+<img class="flamebar" src="gas-burner-ring-blue.webp" alt="Gas burner ring running a clean blue flame after a repair" loading="lazy" width="1600" height="400">
+
+<section class="band">
   <div class="wrap">
-    <div class="eyebrow">Compliance</div>
-    <h2>Repairs and Your COC.</h2>
-    <p class="subhead">A like-for-like part replacement, a new pilot assembly or a valve swap, usually does not affect an existing Gas Certificate of Compliance. A repair that changes the installation itself, a new regulator, altered piping or a relocated cylinder, does require recertifying. We tell you on the callout if the repair affects your COC, and can issue a new one on the same visit. See our <a href="gas-coc-cape-town" style="color:#C21A1B;font-weight:700">Gas Certificate of Compliance page</a> for the full detail.</p>
+    <h2>From the fault you send us to a working geyser, usually one visit.</h2>
+    <p class="lede">Most repairs are diagnosed and fixed on the same callout. Nothing gets signed off until the geyser runs a clean blue flame and holds water temperature.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">Step 1</div>
+        <h3>Send the fault</h3>
+        <p>WhatsApp the symptom, your suburb and the appliance brand if you know it. We confirm a callout time.</p>
+      </div>
+      <div class="step">
+        <div class="num">Step 2</div>
+        <h3>Diagnose on site</h3>
+        <p>Cylinder and gas supply checked first, then the burner, ignition, connections and flue, before anything is assumed broken.</p>
+      </div>
+      <div class="step">
+        <div class="num">Step 3</div>
+        <h3>Quote, then repair</h3>
+        <p>Parts and labour are quoted once the fault is confirmed. You approve it before we touch anything further.</p>
+      </div>
+      <div class="step">
+        <div class="num">Step 4</div>
+        <h3>Test and hand back</h3>
+        <p>The burner is checked for a clean blue flame and the water temperature is confirmed before we leave. A new COC only if the repair changed the installation.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="block">
   <div class="wrap">
-    <div class="eyebrow">Repair Pricing</div>
-    <h2>What a Gas Geyser Repair Costs.</h2>
+    <h2 class="ihead">Why Cape Town homes call Red Flame for a repair.</h2>
+    <p class="ilede">We are a gas shop first. The repair is often how a customer meets us, and the refills are why they stay.</p>
+    <div class="whys">
+      <div class="why">
+        <h3>Diagnosis before parts</h3>
+        <p>We check the cylinder and gas supply before assuming a part inside the geyser has failed. It's the cheaper fault more often than not.</p>
+      </div>
+      <div class="why">
+        <h3>Any brand, any installer</h3>
+        <p>We repair and service gas geysers regardless of who installed them, not only the units we fitted ourselves.</p>
+      </div>
+      <div class="why">
+        <h3>We supply the gas side</h3>
+        <p>If the fix is a bigger cylinder or a second one on auto-changeover, we can arrange it from the same Woodstock shop as the callout.</p>
+      </div>
+      <div class="why">
+        <h3>Refills afterwards</h3>
+        <p>Once the geyser is running again we deliver refills free across our Cape Town area, on your schedule.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block paper">
+  <div class="wrap">
+    <h2 class="ihead">Repair it, or replace it.</h2>
+    <p class="ilede">Most faults are a straightforward part repair. Age and parts availability are what usually tip a job toward replacement instead.</p>
+    <div class="compare">
+      <div class="col">
+        <h3>When a repair is the right call</h3>
+        <p>A single failed part, an ignition fault, a blocked pilot or a worn valve on a unit that's otherwise sound. If the brand's parts are in stock, most of these are fixed on the callout.</p>
+      </div>
+      <div class="col">
+        <h3>When replacement makes more sense</h3>
+        <p>An older unit on its second or third repair, a brand whose parts are hard to source, or a fault where the repair cost starts to approach the price of a new geyser. We'll tell you honestly if that's where a job is heading, before you pay for parts on a unit that's on its way out anyway.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="ihead">Repairs and your Certificate of Compliance.</h2>
+    <div class="split">
+      <div>
+        <div class="callout" style="margin-top:0">
+          <div class="t">A like-for-like part swap usually doesn't touch your COC</div>
+          <p>Replacing a pilot assembly, a valve or another failed part like-for-like is a repair, not a change to the gas installation, so it usually doesn't require a new Certificate of Compliance. What does require recertifying is anything that changes the installation itself: a new regulator, altered piping, or a relocated cylinder. We tell you on the callout which side of that line your repair falls on, and can issue a new COC on the same visit if it's needed.</p>
+        </div>
+        <p class="ilede" style="margin-top:22px;font-size:15.5px">This is also where an older installation sometimes gets found. A repair callout is a common moment to spot a hose past its date code or a cylinder set up without outside venting, and we'll flag it even where it isn't the reason we were called.</p>
+      </div>
+      <div class="split-ph">
+        <img src="install-geyser-rinnai-cape-town.webp" alt="Rinnai gas geyser repair in progress in Cape Town, wall opened up with the gas and water lines exposed and a tool bucket on site" loading="lazy" width="800" height="1067" style="object-position:50% 35%">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block paper">
+  <div class="wrap">
+    <h2 class="ihead">What a gas geyser repair costs.</h2>
     <div class="ptable-wrap">
       <table class="ptable">
         <thead><tr><th>Service</th><th>From (ZAR)</th><th>Not Included</th></tr></thead>
         <tbody>
           <tr><td>Callout &amp; fault diagnosis (incl. labour)</td><td>R750</td><td>Parts and remedial repair, quoted separately</td></tr>
           <tr><td>Annual service</td><td>R750</td><td>Parts, if a fault is found during the service</td></tr>
-          <tr><td>Remedial repair / parts</td><td>Quoted on site</td><td>&mdash;</td></tr>
-          <tr><td>New COC (if repair affects the installation)</td><td>R950</td><td>&mdash;</td></tr>
+          <tr><td>Remedial repair / parts</td><td>Quoted on site</td><td>Not applicable</td></tr>
+          <tr><td>New COC (if repair affects the installation)</td><td>R950</td><td>Not applicable</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="ptable-note">Parts are quoted on site once the fault is diagnosed, so you approve the cost before we proceed.</p>
+    <p class="ptable-note">Starting prices. Parts and the repair itself are quoted on site once the fault is diagnosed, so you approve the cost before we proceed.</p>
+    <h3 class="ihead" style="font-size:20px;margin:40px 0 0">What moves the price.</h3>
+    <ul class="movers">
+      <li><b>What's actually wrong.</b> A like-for-like part swap costs less than a fault that changes the installation.</li>
+      <li><b>Parts availability.</b> Some brands hold parts locally, others need to be sourced, which affects turnaround and cost.</li>
+      <li><b>Access to the unit.</b> A ground-floor external geyser is quicker to reach than one boxed in behind other work.</li>
+      <li><b>Whether the installation needs bringing up to standard.</b> An old hose past its date code or a missing drip leg gets fixed and quoted alongside the original fault.</li>
+      <li><b>Age of the unit.</b> An older geyser on repeat callouts may cost less to replace than to keep repairing.</li>
+      <li><b>Whether a new COC is required.</b> Only where the repair alters the installation itself, not on a like-for-like part swap.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="brandband">
+  <div class="wrap">
+    <h2>Gas geyser brands we repair and service.</h2>
+    <p>We repair and service standard LPG gas geysers regardless of who installed them or where the unit was bought. These are the three brands we see most often in Cape Town homes.</p>
+    <div class="brandrow">
+      <img src="logo-rinnai.svg" alt="Rinnai" width="140" height="32" loading="lazy">
+      <img src="logo-dewhot.svg" alt="Dewhot" width="118" height="32" loading="lazy">
+      <span class="wordmark">Typhoon</span>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="ihead">A geyser we recommissioned in Cape Town.</h2>
+    <p class="ilede">Our own work, not a stock photo. Back in service and checked for a clean blue flame before we signed off.</p>
+    <figure class="workshot">
+      <img src="install-geyser-rinnai-unit.webp" alt="Rinnai gas geyser back in service on a Cape Town wall after a Red Flame Gas Supplier repair, with the gas line and water connections fitted" loading="lazy" width="1200" height="800">
+      <figcaption>Rinnai Infinity 16, back in service after the wall was opened up and the fault traced. Checked for a clean blue flame before handover.</figcaption>
+    </figure>
   </div>
 </section>
 
 <section id="faq" class="block">
   <div class="wrap" style="max-width:880px">
-    <div class="eyebrow">Frequently Asked</div>
-    <h2>Gas Geyser Repair Questions Cape Town Customers Ask.</h2>
+    <h2 class="ihead">Gas geyser repair questions Cape Town customers ask.</h2>
     <details>
       <summary>Why is my gas geyser not igniting?</summary>
       <div class="a">The most common causes are an empty or near-empty cylinder, a closed or faulty gas valve, a fouled pilot or ignition sensor, or low water pressure not triggering the flow switch. We diagnose on the callout, before assuming a part is broken, because an empty cylinder is by far the most common cause in winter.</div>
@@ -343,9 +578,30 @@
   </div>
 </section>
 
+<section class="block paper">
+  <div class="wrap">
+    <h2 class="ihead">Gas geyser repairs across Cape Town.</h2>
+    <p class="ilede">We repair and service from our Woodstock shop at 170 Victoria Road. These are the areas we cover most, and each page carries the gas delivery and installation detail for that suburb.</p>
+    <div class="areas">
+      <a href="woodstock">Woodstock</a>
+      <a href="higgovale">Higgovale</a>
+      <a href="oranjezicht">Oranjezicht</a>
+      <a href="pinelands">Pinelands</a>
+      <a href="rondebosch">Rondebosch</a>
+      <a href="newlands">Newlands</a>
+      <a href="claremont">Claremont</a>
+      <a href="atlantic-seaboard">Atlantic Seaboard</a>
+      <a href="edgemead">Edgemead</a>
+      <a href="goodwood">Goodwood</a>
+      <a href="parow">Parow</a>
+      <a href="bellville">Bellville</a>
+    </div>
+  </div>
+</section>
+
 <section class="order">
   <div class="wrap">
-    <h2>Gas Geyser Not Working?</h2>
+    <h2 class="ihead">Gas geyser not working?</h2>
     <p>WhatsApp the symptom, your suburb and the appliance brand if you know it. We confirm a callout time.</p>
     <div class="order-ctas">
       <a class="btn btn-whatsapp btn-lg" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%20need%20a%20GAS%20GEYSER%20REPAIR.%20Suburb%3A%20%0AAppliance%2Fbrand%3A%20%0AFault%3A%20" target="_blank" rel="noopener">💬 Get Help Now</a>

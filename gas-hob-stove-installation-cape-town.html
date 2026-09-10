@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preload" as="image" href="Background.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="hob-installation-cape-town.webp" type="image/webp" fetchpriority="high">
 <!-- Google Analytics (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M53WZ17EYB"></script>
 <script>
@@ -26,7 +26,7 @@
 <link rel="canonical" href="https://www.redflamegas.co.za/gas-hob-stove-installation-cape-town">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="red-flame-favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="red-flame-android-192.png">
 <link rel="icon" type="image/png" sizes="16x16" href="red-flame-favicon-16.png">
@@ -57,7 +57,7 @@
         "@type": "OfferCatalog",
         "name": "Gas Hob and Stove Installation Pricing Cape Town",
         "itemListElement": [
-          { "@type": "Offer", "priceCurrency": "ZAR", "price": "2500", "description": "Gas hob or stove installation in Cape Town, COC included", "availability": "https://schema.org/InStock" }
+          { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "ZAR", "minPrice": "2500", "valueAddedTaxIncluded": true }, "description": "Gas hob or stove installation in Cape Town, COC included. Starting price, quoted in full after an on-site assessment. Excludes the appliance, which the customer supplies." }
         ]
       }
     }
@@ -83,7 +83,7 @@
     {
       "@type": "Question",
       "name": "How much does a gas hob installation cost?",
-      "acceptedAnswer": { "@type": "Answer", "text": "From R2,500 for a standard installation, including the COC. Excludes the hob or stove itself, cylinders and a cage if one is required. WhatsApp your kitchen layout for an exact quote." }
+      "acceptedAnswer": { "@type": "Answer", "text": "From R2,500 for a standard installation, including the COC. That is a starting price, quoted in full after an on-site assessment. You buy the hob or stove from your own supplier. We supply the cylinders and the cage where one is required. WhatsApp your kitchen layout for an exact quote." }
     },
     {
       "@type": "Question",
@@ -98,7 +98,7 @@
     {
       "@type": "Question",
       "name": "Can you connect a stove I already bought?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. We install any hob or stove brand, whether you bought it yourself or we supply one. The installation, gas line and COC are the same job either way." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. You buy the hob or stove from your own supplier, and we install it. We install any brand, and the installation, gas line and COC are the same job either way. We do supply the cylinders and the cage where one is needed." }
     },
     {
       "@type": "Question",
@@ -198,6 +198,138 @@
   .sticky-call a.wa{background:#1a7d3f}
   @media(min-width:860px){.sticky-call{display:none}}
   @media(max-width:859px){body{padding-bottom:58px}}
+  /* ===== Installations visual system ===== */
+  :root{
+    --steel:#1F252B;--steel-2:#2A323A;--galv:#C3CACE;--paper:#F1F3F2;
+    --flame:#C21A1B;--cyl:#E8541F;--ink:#12171B;--line:#DFE4E3;
+  }
+  .disp{font-family:"Archivo","Montserrat",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+
+  /* Hero: copy left, evidence photo bleeding right */
+  .ihero{background:var(--steel);color:#fff;overflow:hidden}
+  .ihero-grid{display:grid;grid-template-columns:1fr}
+  @media(min-width:900px){.ihero-grid{grid-template-columns:1fr 1fr;align-items:stretch}}
+  .ihero-copy{padding:54px 22px 50px}
+  @media(min-width:900px){.ihero-copy{padding:88px 52px 88px max(22px,calc(50vw - 518px));align-self:center}}
+  .ihero h1{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:clamp(33px,4.5vw,53px);line-height:1.03;letter-spacing:-.025em;font-weight:800;margin:0 0 20px;color:#fff;text-transform:none;max-width:15ch}
+  .ihero-lede{color:#B4BFC6;font-size:17px;line-height:1.62;margin:0 0 30px;max-width:50ch}
+  .ihero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .ihero-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px 26px;margin:36px 0 0;padding-top:24px;border-top:1px solid rgba(195,202,206,.2);max-width:460px}
+  .ihero-facts div{min-width:0}
+  .ihero-facts dt{font-size:13px;color:#8B98A1;font-weight:500;margin:0 0 3px}
+  .ihero-facts dd{margin:0;font-weight:700;font-size:15px;color:#fff;font-family:"Archivo","Montserrat",Arial,sans-serif}
+  .ihero-photo{position:relative;min-height:300px;background:var(--steel-2)}
+  @media(min-width:900px){.ihero-photo{min-height:100%}}
+  .ihero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 42%;min-height:300px}
+  .ihero-cap{position:absolute;left:0;right:0;bottom:0;padding:26px 22px 16px;font-size:12.5px;line-height:1.45;color:#D7DDE1;background:linear-gradient(180deg,rgba(20,25,30,0) 0%,rgba(20,25,30,.82) 62%)}
+
+  /* Job grid: featured jobs carry evidence, the rest are rate lines */
+  .jobs{display:grid;grid-template-columns:1fr;gap:20px;margin-top:34px}
+  @media(min-width:820px){.jobs{grid-template-columns:repeat(2,1fr)}}
+  .job{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+  .job-ph{aspect-ratio:1/1;overflow:hidden;background:var(--steel)}
+  .job-ph img{width:100%;height:100%;object-fit:cover;object-position:50% 42%}
+  .job-body{padding:24px 24px 26px}
+  .job h3{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:21px;font-weight:800;letter-spacing:-.02em;margin:0 0 10px;color:var(--ink)}
+  .job p{margin:12px 0 0;color:#525C60;font-size:14.5px;line-height:1.6}
+  .job-price{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:15px;font-weight:700;color:var(--cyl);letter-spacing:-.01em}
+  .job-more{display:inline-block;margin-top:16px;color:var(--flame);font-weight:700;font-size:14px;text-decoration:none;border-bottom:2px solid rgba(194,26,27,.25);padding-bottom:2px}
+  .job-more:hover{border-bottom-color:var(--flame)}
+  .plate{display:inline-flex;align-items:baseline;gap:9px;background:var(--steel);padding:8px 13px}
+  .plate .k{font-size:12px;color:#93A0A8;font-weight:500}
+  .plate .v{font-size:13.5px;font-weight:700;color:#fff;font-family:"Archivo","Montserrat",Arial,sans-serif}
+
+  /* Compact rate lines for jobs without their own photo */
+  .rates{margin-top:20px;border-top:1px solid var(--line)}
+  .rate{display:grid;grid-template-columns:1fr;gap:7px;padding:20px 2px;border-bottom:1px solid var(--line)}
+  @media(min-width:760px){.rate{grid-template-columns:200px 1fr 118px;gap:0 26px;align-items:baseline}}
+  .rate .n{font-family:"Archivo","Montserrat",Arial,sans-serif;font-weight:700;font-size:17px;letter-spacing:-.015em;color:var(--ink)}
+  .rate .d{color:#5C6669;font-size:14.5px;line-height:1.55}
+  .rate .f{font-family:"Archivo","Montserrat",Arial,sans-serif;font-weight:700;font-size:15px;color:var(--cyl)}
+  @media(min-width:760px){.rate .f{text-align:right}}
+
+  /* Dark band for the COC sequence */
+  .band{background:var(--steel);color:#fff;padding:64px 0}
+  .band h2{font-family:"Archivo","Montserrat",Arial,sans-serif;color:#fff;font-size:clamp(26px,3.1vw,38px);font-weight:800;letter-spacing:-.025em;line-height:1.1;text-transform:none;max-width:19ch;margin:0 0 16px}
+  .band .lede{color:#AFBAC1;font-size:16.5px;line-height:1.65;max-width:62ch;margin:0}
+  .steps{display:grid;grid-template-columns:1fr;gap:1px;margin-top:44px;background:rgba(195,202,206,.18);border:1px solid rgba(195,202,206,.18)}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(4,1fr)}}
+  .step{background:var(--steel);padding:24px 22px 26px}
+  .step .num{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:13px;font-weight:700;color:var(--cyl);margin-bottom:12px}
+  .step h3{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:16.5px;font-weight:700;color:#fff;margin:0 0 8px;letter-spacing:-.015em}
+  .step p{margin:0;color:#A7B2BA;font-size:14px;line-height:1.55}
+
+  /* Evidence strip */
+  .ev{display:grid;grid-template-columns:1fr;gap:18px;margin-top:30px}
+  @media(min-width:700px){.ev{grid-template-columns:repeat(3,1fr)}}
+  .ev figure{margin:0;background:#fff;border:1px solid var(--line)}
+  .ev .ph{aspect-ratio:3/4;overflow:hidden;background:var(--steel)}
+  .ev .ph img{width:100%;height:100%;object-fit:cover}
+  .ev figcaption{padding:16px 18px 18px;font-size:13.5px;line-height:1.55;color:#525C60}
+  .ev figcaption b{display:block;font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:15px;color:var(--ink);margin-bottom:4px;font-weight:700}
+
+  /* Section heading treatment for installation pages */
+  .ihead{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:clamp(26px,3.1vw,38px);font-weight:800;letter-spacing:-.025em;line-height:1.1;margin:0 0 16px;color:var(--ink);text-transform:none;max-width:20ch}
+  .ilede{color:#525C60;font-size:16.5px;line-height:1.65;max-width:66ch;margin:0}
+  .paper{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+  /* Two-option comparison */
+  .compare{display:grid;grid-template-columns:1fr;gap:18px;margin-top:32px}
+  @media(min-width:760px){.compare{grid-template-columns:1fr 1fr;gap:20px}}
+  .compare .col{background:#fff;border:1px solid var(--line);padding:24px 26px 26px}
+  .compare h3{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:19px;font-weight:800;letter-spacing:-.02em;margin:12px 0 0;color:var(--ink)}
+  .compare p{margin:10px 0 0;color:#525C60;font-size:14.5px;line-height:1.62}
+
+  /* Restyled to match: square, cylinder-orange rule, no pink wash */
+  .callout{margin-top:34px;padding:22px 26px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--cyl);border-radius:0}
+  .callout .t{font-family:"Archivo","Montserrat",Arial,sans-serif;font-weight:800;font-size:17.5px;color:var(--ink);letter-spacing:-.02em}
+  .callout p{color:#525C60;font-size:14.5px;margin:9px 0 0;line-height:1.62}
+  .ptable{border:1px solid var(--line);border-radius:0}
+  .ptable th{background:var(--steel);letter-spacing:.06em}
+  .ptable td:nth-child(2){color:var(--cyl);font-family:"Archivo","Montserrat",Arial,sans-serif}
+  details{border-radius:0;background:#fff;border-color:var(--line)}
+  details[open]{border-color:var(--steel)}
+  details summary{font-family:"Archivo","Montserrat",Arial,sans-serif;font-weight:700;letter-spacing:-.015em}
+  .suburb{border-radius:0;background:#fff;border-color:var(--line)}
+  .svc-link{border-radius:0;background:#fff;border-color:var(--line);font-family:"Archivo","Montserrat",Arial,sans-serif}
+  .order{background:var(--paper);border-color:var(--line)}
+  /* ---- Added for the installation page rebuild ---- */
+  .creds{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .creds-in{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border-left:1px solid var(--line);border-right:1px solid var(--line)}
+  @media(min-width:560px){.creds-in{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:960px){.creds-in{grid-template-columns:repeat(4,1fr)}}
+  .cred{background:var(--paper);padding:22px 24px;display:flex;gap:13px;align-items:flex-start}
+  .cred .tick{flex:none;width:19px;height:19px;margin-top:2px;color:var(--cyl)}
+  .cred b{display:block;font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:15px;font-weight:700;color:var(--ink);letter-spacing:-.015em}
+  .cred span{display:block;color:#5C6669;font-size:13.5px;line-height:1.5;margin-top:4px}
+  .flamebar{display:block;width:100%;height:clamp(110px,15vw,180px);object-fit:cover;object-position:50% 58%}
+  .split{display:grid;grid-template-columns:1fr;gap:26px;align-items:stretch;margin-top:32px}
+  @media(min-width:880px){.split{grid-template-columns:1.4fr .85fr;gap:36px}}
+  .split-ph{position:relative;border:1px solid var(--line);overflow:hidden;background:var(--steel);min-height:320px}
+  .install-photo{border-radius:0;border-color:var(--line)}
+  .split-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .whys{display:grid;grid-template-columns:1fr;gap:1px;margin-top:34px;background:var(--line);border:1px solid var(--line)}
+  @media(min-width:700px){.whys{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1000px){.whys{grid-template-columns:repeat(4,1fr)}}
+  .why{background:#fff;padding:26px 24px 28px}
+  .why h3{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:17px;font-weight:800;letter-spacing:-.02em;margin:0 0 9px;color:var(--ink)}
+  .why p{margin:0;color:#525C60;font-size:14px;line-height:1.6}
+  .brandband{background:var(--steel);padding:52px 0}
+  .brandband h2{font-family:"Archivo","Montserrat",Arial,sans-serif;color:#fff;font-size:clamp(23px,2.6vw,31px);font-weight:800;letter-spacing:-.025em;line-height:1.12;margin:0 0 14px;max-width:22ch}
+  .brandband p{color:#AFBAC1;font-size:15.5px;line-height:1.62;max-width:60ch;margin:0}
+  .brandrow{display:flex;flex-wrap:wrap;align-items:center;gap:30px 52px;margin-top:36px;padding-top:32px;border-top:1px solid rgba(195,202,206,.2)}
+  .brandrow img{height:32px;width:auto;display:block}
+  .brandrow .wordmark{font-family:"Archivo","Montserrat",Arial,sans-serif;font-size:25px;font-weight:800;letter-spacing:.055em;color:#fff;line-height:1}
+  .movers{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+  @media(min-width:700px){.movers{grid-template-columns:repeat(2,1fr)}}
+  .movers li{background:#fff;padding:17px 20px;font-size:14px;color:#525C60;line-height:1.55}
+  .movers li b{color:var(--ink);font-weight:700;font-family:"Archivo","Montserrat",Arial,sans-serif}
+  .areas{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .areas a{border:1px solid var(--line);background:#fff;padding:11px 17px;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none}
+  .areas a:hover{border-color:var(--flame);color:var(--flame)}
+  .workshot{border:1px solid var(--line);overflow:hidden;margin-top:30px;background:var(--steel)}
+  .workshot img{width:100%;height:auto;display:block}
+  .workshot figcaption{padding:16px 20px 18px;font-size:13.5px;line-height:1.55;color:#525C60;background:#fff;border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
@@ -232,62 +364,149 @@
 <div class="wrap crumbs"><a href="/">Home</a> &rsaquo; <a href="gas-installation-cape-town">Gas Installation</a> &rsaquo; Gas Hob &amp; Stove Installation</div>
 
 <main id="main">
-<header class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">SAQCC Registered · SANS 10087 · COC on the Job</div>
-    <h1>Gas Hob and Stove Installation in <span class="accent">Cape Town</span></h1>
-    <div class="hero-ctas">
-      <a class="btn btn-red btn-lg" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%20need%20a%20quote%20for%20a%20GAS%20HOB%2FSTOVE%20INSTALLATION.%20Suburb%3A%20%0AAppliance%2Fbrand%3A%20%0AProperty%20type%3A%20" target="_blank" rel="noopener">Get a Quote</a>
-      <a class="btn btn-outline btn-lg" href="tel:+27645109495">Call 064 510 9495</a>
+<header class="ihero">
+  <div class="ihero-grid">
+    <div class="ihero-copy">
+      <h1>Gas hob and stove installation in Cape Town.</h1>
+      <p class="ihero-lede">Cupboard-fed 9kg or an external cylinder, connected and regulated to SANS 10087 with the 200mm safety clearance checked. Most kitchens are done in one to two hours, with the Certificate of Compliance signed before we leave.</p>
+      <div class="ihero-ctas">
+        <a class="btn btn-red btn-lg" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%20need%20a%20quote%20for%20a%20GAS%20HOB%2FSTOVE%20INSTALLATION.%20Suburb%3A%20%0AAppliance%2Fbrand%3A%20%0AProperty%20type%3A%20" target="_blank" rel="noopener">WhatsApp a quote</a>
+        <a class="btn btn-outline btn-lg" href="tel:+27645109495">Call 064 510 9495</a>
+      </div>
+      <dl class="ihero-facts">
+        <div><dt>Registered with</dt><dd>SAQCC Gas</dd></div>
+        <div><dt>Built to</dt><dd>SANS 10087</dd></div>
+        <div><dt>Installation</dt><dd>From R2,500</dd></div>
+        <div><dt>On site</dt><dd>1 to 2 hours</dd></div>
+      </dl>
+    </div>
+    <div class="ihero-photo">
+      <img src="hob-installation-cape-town.webp" alt="Four-burner gas hob with cast iron trivets installed in a Cape Town kitchen by Red Flame Gas Supplier" width="1400" height="1050" fetchpriority="high" decoding="async">
+      <p class="ihero-cap">A drop-in gas hob connected, regulated and pressure tested to SANS 10087 before the Certificate of Compliance is signed.</p>
     </div>
   </div>
 </header>
 
-<div class="trust-band">
-  <div class="wrap trust-grid">
-    <div class="trust-item"><span class="tick">✓</span> SAQCC Registered</div>
-    <div class="trust-item"><span class="tick">✓</span> 5.0 Star Rated on Google</div>
-    <div class="trust-item"><span class="tick">✓</span> Woodstock Based</div>
-    <div class="trust-item"><span class="tick">✓</span> COC Issued on the Job</div>
+<section class="creds">
+  <div class="wrap" style="padding:0">
+    <div class="creds-in">
+      <div class="cred"><svg class="tick" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg><div><b>SANS 10087</b><span>Every connection is built and tested to the national gas installation standard.</span></div></div>
+      <div class="cred"><svg class="tick" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg><div><b>SAQCC registered</b><span>The work is done by a registered gas practitioner, not a general handyman.</span></div></div>
+      <div class="cred"><svg class="tick" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg><div><b>COC on the day</b><span>The Certificate of Compliance is issued on the same visit, once the test passes.</span></div></div>
+      <div class="cred"><svg class="tick" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg><div><b>Any brand installed</b><span>You buy the hob or stove from your own supplier. We connect and certify it.</span></div></div>
+    </div>
   </div>
-</div>
+</section>
 
 <section class="block">
   <div class="wrap">
-    <div class="eyebrow">What's Involved</div>
-    <h2>What a Hob or Stove Installation Involves.</h2>
-    <p class="subhead">Running the gas line from the cylinder to the appliance, fitting the regulator and isolation valve, checking clearances around the burners, pressure testing the connection for leaks, and signing the Gas Certificate of Compliance once it passes. A single hob connection in a Woodstock or City Bowl flat is usually the simplest install we do; a freestanding stove or a kitchen renovation with a moved gas point takes longer.</p>
+    <h2 class="ihead">What a hob or stove installation involves.</h2>
+    <p class="ilede">Running the gas line from the cylinder to the appliance, fitting the regulator and isolation valve, checking clearances around the burners, pressure testing the connection for leaks, and signing the Gas Certificate of Compliance once it passes. A single hob connection in a Woodstock or City Bowl flat is usually the simplest install we do. A freestanding stove, or a kitchen renovation with a moved gas point, takes longer.</p>
     <div class="install-photo">
-      <img src="gas-installation-cape-town.webp" alt="Gas hob installation by Red Flame Gas Supplier in Cape Town, all four burners lit on the finished connection" loading="lazy" width="1200" height="800">
+      <img src="gas-line-connection-cape-town.webp" alt="Gas line union and isolation valve being fitted by hand during a hob installation" loading="lazy" width="1200" height="800">
     </div>
   </div>
 </section>
 
-<section class="block" style="background:#fafafa;border-top:1px solid #efefef;border-bottom:1px solid #efefef">
+<img class="flamebar" src="gas-burner-blue-flame.webp" alt="Gas burner running a clean blue flame after commissioning" loading="lazy" width="1600" height="400">
+
+<section class="band">
   <div class="wrap">
-    <div class="eyebrow">Cylinder Setup</div>
-    <h2>Internal or External Cylinder Setup.</h2>
-    <p class="subhead">A 9kg cylinder inside a ventilated kitchen cupboard is the standard setup for a single hob in a small flat or apartment, common across Woodstock and the City Bowl. A freestanding stove, a double hob, or a kitchen that also feeds a braai point usually needs an external cylinder or bank instead, mounted in a gas cage outside where it can be swapped without anyone entering the house. We assess the kitchen on site and recommend whichever setup actually suits how it gets used.</p>
+    <h2>From your first message to the certificate, in one visit.</h2>
+    <p class="lede">A standard hob or stove connection is a single appointment. Nothing is signed off until the line holds pressure and every burner lights clean.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">Step 1</div>
+        <h3>Send the kitchen</h3>
+        <p>WhatsApp a photo of the kitchen, the appliance and where the cylinder can sit. You get a starting price and a booking.</p>
+      </div>
+      <div class="step">
+        <div class="num">Step 2</div>
+        <h3>Run the gas line</h3>
+        <p>Regulator, high-pressure line and isolation valve fitted, with clearances checked against the burner positions.</p>
+      </div>
+      <div class="step">
+        <div class="num">Step 3</div>
+        <h3>Pressure test</h3>
+        <p>The connection is put under pressure and held. Every burner is lit and checked for a clean blue flame.</p>
+      </div>
+      <div class="step">
+        <div class="num">Step 4</div>
+        <h3>COC in your hand</h3>
+        <p>The Gas Certificate of Compliance is completed and handed over before we leave. That is the document your insurer asks for.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="block">
   <div class="wrap">
-    <div class="eyebrow">Kitchen Safety</div>
-    <h2>The 200mm Rule.</h2>
-    <div class="callout">
-      <div class="t">No Plug Points Within 200mm of a Burner or Gas Release Point</div>
-      <p>SANS 10087 requires at least 200mm of clearance between any plug point or light switch and a gas burner or release point, and no plug points at all in the same partition as an internal cylinder. This trips up a lot of DIY kitchen renovations, an electrician places a socket exactly where the hob was meant to go, and the installation fails compliance before it starts. Worth checking before tiling or cabinetry goes in, not after.</p>
+    <h2 class="ihead">Why Cape Town kitchens use Red Flame.</h2>
+    <p class="ilede">We are a gas shop first. The installation is how most customers meet us, and the refills are why they stay.</p>
+    <div class="whys">
+      <div class="why">
+        <h3>You keep the appliance choice</h3>
+        <p>Buy the hob or stove wherever you get the best price. We install any brand and take no markup on the unit itself.</p>
+      </div>
+      <div class="why">
+        <h3>One visit, not three</h3>
+        <p>Assessment, installation, pressure test and the certificate are the same appointment for a standard kitchen.</p>
+      </div>
+      <div class="why">
+        <h3>We supply the gas side</h3>
+        <p>Cylinders, regulator and a cage where the setup needs one, all from our Woodstock shop at 170 Victoria Road.</p>
+      </div>
+      <div class="why">
+        <h3>Refills afterwards</h3>
+        <p>Once the hob is running we deliver refills free across our Cape Town area. Most customers never carry a cylinder again.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="block" style="background:#fafafa;border-top:1px solid #efefef;border-bottom:1px solid #efefef">
+<section class="block paper">
   <div class="wrap">
-    <div class="eyebrow">Pricing</div>
-    <h2>Hob and Stove Installation Pricing.</h2>
-    <p class="subhead">From R2,500 for a standard connection. Freestanding stoves, moved gas points and external cylinder setups cost more depending on piping distance.</p>
-    <div class="ptable-wrap">
+    <h2 class="ihead">Internal or external cylinder setup.</h2>
+    <p class="ilede">Where the cylinder sits decides most of the job. We assess the kitchen on site and recommend whichever setup actually suits how it gets used.</p>
+    <div class="install-photo">
+      <img src="kitchen-gas-hob-installation.webp" alt="Modern kitchen with a stainless gas hob and a wall-mounted gas water heater" loading="lazy" width="1200" height="800">
+    </div>
+    <div class="compare">
+      <div class="col">
+        <h3>Cylinder inside the cupboard</h3>
+        <p>A ventilated kitchen cupboard holding a 9kg cylinder is the standard setup for a single hob in a small flat or apartment, common across Woodstock and the City Bowl. No plug points may sit in the same partition as the cylinder. It stays out of sight and the cupboard door is the only access anyone needs.</p>
+      </div>
+      <div class="col">
+        <h3>Cylinder outside in a cage</h3>
+        <p>A freestanding stove, a double hob, or a kitchen that also feeds a braai point usually needs an external cylinder or bank instead, mounted in a gas cage outside. Bigger cylinders mean longer between swaps, and nobody has to enter the house to change one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="ihead">The 200mm rule.</h2>
+    <div class="split">
+      <div>
+        <div class="callout" style="margin-top:0">
+          <div class="t">No plug points within 200mm of a burner or gas release point</div>
+          <p>SANS 10087 requires at least 200mm of clearance between any plug point or light switch and a gas burner or release point, and no plug points at all in the same partition as an internal cylinder. This trips up a lot of DIY kitchen renovations. An electrician places a socket exactly where the hob was meant to go, and the installation fails compliance before it starts.</p>
+        </div>
+        <p class="ilede" style="margin-top:22px;font-size:15.5px">Worth checking before the tiling or the cabinetry goes in, not after. If you are mid-renovation, send us the kitchen plan and we will tell you whether the gas point and the sockets can live where they are drawn.</p>
+      </div>
+      <div class="split-ph">
+        <img src="gas-hob-burner-detail.webp" alt="Close-up of a gas hob burner crown and cast iron trivet" loading="lazy" width="800" height="1067">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block paper">
+  <div class="wrap">
+    <h2 class="ihead">Hob and stove installation pricing.</h2>
+    <p class="ilede">From R2,500 for a standard connection. Freestanding stoves, moved gas points and external cylinder setups cost more depending on piping distance.</p>
+    <div class="ptable-wrap" style="margin-top:26px">
       <table class="ptable">
         <thead><tr><th>Service</th><th>From (ZAR)</th><th>Not Included</th></tr></thead>
         <tbody>
@@ -297,17 +516,48 @@
         </tbody>
       </table>
     </div>
-    <p class="ptable-note">Prices exclude the hob or stove itself, cylinders and a gas cage where one is required. Full pricing for other appliances is on our <a href="gas-installation-cape-town" style="color:#C21A1B">gas installation page</a>.</p>
+    <p class="ptable-note">A starting price, not a fixed quote. The final number comes from the on-site assessment. You buy the hob or stove from your own supplier, and we supply the cylinders and a cage where one is required. Full pricing for other appliances is on our <a href="gas-installation-cape-town" style="color:#C21A1B">gas installation page</a>.</p>
+    <h3 class="ihead" style="font-size:20px;margin:40px 0 0">What moves the price.</h3>
+    <ul class="movers">
+      <li><b>Distance from cylinder to hob.</b> Every extra metre of gas line adds material and labour.</li>
+      <li><b>Whether the gas point moves.</b> Connecting where the point already sits is the cheapest version of this job.</li>
+      <li><b>Internal cupboard or external cage.</b> An external setup means a wall penetration and usually a cage.</li>
+      <li><b>Drop-in hob or freestanding stove.</b> A freestanding stove needs a flexible connection and more clearance checks.</li>
+      <li><b>Existing pipework.</b> If there is old pipe or an unsafe previous install, it gets quoted separately.</li>
+      <li><b>Access.</b> A ground-floor Woodstock flat is quicker than a third-floor unit with no lift.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="brandband">
+  <div class="wrap">
+    <h2>Gas appliance brands we install.</h2>
+    <p>For a hob or stove you buy the unit from your own supplier and we connect and certify any brand. On the water heating side, these are the three we fit most often in Cape Town homes.</p>
+    <div class="brandrow">
+      <img src="logo-rinnai.svg" alt="Rinnai" width="140" height="32" loading="lazy">
+      <img src="logo-dewhot.svg" alt="Dewhot" width="118" height="32" loading="lazy">
+      <span class="wordmark">Typhoon</span>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="ihead">A hob we commissioned in Cape Town.</h2>
+    <p class="ilede">Our own work, not a stock photo. This is what the finished connection looks like at sign-off.</p>
+    <figure class="workshot">
+      <img src="gas-installation-cape-town.webp" alt="Gas hob installed by Red Flame Gas Supplier in Cape Town with all four burners lit and burning blue after the pressure test" loading="lazy" width="1200" height="800">
+      <figcaption>Four-burner hob commissioned in a Cape Town kitchen. Every burner lit and checked for a clean blue flame before the Certificate of Compliance was signed.</figcaption>
+    </figure>
   </div>
 </section>
 
 <section id="faq" class="block">
   <div class="wrap" style="max-width:880px">
-    <div class="eyebrow">Frequently Asked</div>
-    <h2>Hob &amp; Stove Questions Cape Town Customers Ask.</h2>
+    <h2 class="ihead">Hob and stove questions Cape Town customers ask.</h2>
     <details>
       <summary>How much does a gas hob installation cost?</summary>
-      <div class="a">From R2,500 for a standard installation, including the COC. Excludes the hob or stove itself, cylinders and a cage if one is required. WhatsApp your kitchen layout for an exact quote.</div>
+      <div class="a">From R2,500 for a standard installation, including the COC. That is a starting price, quoted in full after an on-site assessment. You buy the hob or stove from your own supplier. We supply the cylinders and the cage where one is required. WhatsApp your kitchen layout for an exact quote.</div>
     </details>
     <details>
       <summary>Can a 9kg cylinder go inside a kitchen cupboard?</summary>
@@ -319,7 +569,7 @@
     </details>
     <details>
       <summary>Can you connect a stove I already bought?</summary>
-      <div class="a">Yes. We install any hob or stove brand, whether you bought it yourself or we supply one. The installation, gas line and COC are the same job either way.</div>
+      <div class="a">Yes. You buy the hob or stove from your own supplier, and we install it. We install any brand, and the installation, gas line and COC are the same job either way. We do supply the cylinders and the cage where one is needed.</div>
     </details>
     <details>
       <summary>How long does a hob installation take?</summary>
@@ -328,9 +578,30 @@
   </div>
 </section>
 
+<section class="block paper">
+  <div class="wrap">
+    <h2 class="ihead">Hob and stove installations across Cape Town.</h2>
+    <p class="ilede">We install and certify from our Woodstock shop at 170 Victoria Road. These are the areas we cover most, and each page carries the gas delivery and installation detail for that suburb.</p>
+    <div class="areas">
+      <a href="woodstock">Woodstock</a>
+      <a href="higgovale">Higgovale</a>
+      <a href="oranjezicht">Oranjezicht</a>
+      <a href="pinelands">Pinelands</a>
+      <a href="rondebosch">Rondebosch</a>
+      <a href="newlands">Newlands</a>
+      <a href="claremont">Claremont</a>
+      <a href="atlantic-seaboard">Atlantic Seaboard</a>
+      <a href="edgemead">Edgemead</a>
+      <a href="goodwood">Goodwood</a>
+      <a href="parow">Parow</a>
+      <a href="bellville">Bellville</a>
+    </div>
+  </div>
+</section>
+
 <section class="order">
   <div class="wrap">
-    <h2>Need a Gas Hob or Stove Installed?</h2>
+    <h2 class="ihead">Need a gas hob or stove installed?</h2>
     <p>WhatsApp your suburb, appliance and property type. We confirm a site visit and quote before any work starts.</p>
     <div class="order-ctas">
       <a class="btn btn-whatsapp btn-lg" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%20need%20a%20quote%20for%20a%20GAS%20HOB%2FSTOVE%20INSTALLATION.%20Suburb%3A%20%0AAppliance%2Fbrand%3A%20%0AProperty%20type%3A%20" target="_blank" rel="noopener">💬 Get a Quote</a>

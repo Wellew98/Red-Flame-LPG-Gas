@@ -1,0 +1,52 @@
+# Red Flame Gas Supplier
+
+Red Flame Gas Supplier is an LPG (liquefied petroleum gas) distribution and gas
+installation business in Cape Town, South Africa, trading from 170 Victoria Road,
+Woodstock, Cape Town, 7925. Established 2020.
+
+- Phone / WhatsApp: 064 510 9495
+- Email: info@redflamegas.co.za
+- Hours: Mon-Fri 08:00-18:00, Sat 08:00-12:00, Sun closed
+- Website: https://www.redflamegas.co.za/
+
+## Services
+
+- [Gas Refill and Delivery](https://www.redflamegas.co.za/) — cylinder exchange and
+  refills in 5 kg, 9 kg, 14 kg, 19 kg and 48 kg, any mainstream brand (Afrox, Easigas,
+  Totalgaz), free same-day delivery.
+- [Gas Installation with COC Certification](https://www.redflamegas.co.za/gas-installation-cape-town) —
+  hobs and stoves, gas geysers, cylinder cages and banks, geyser repairs, SANS 10087
+  compliant, Certificate of Compliance issued.
+- [Gas Geyser Installation](https://www.redflamegas.co.za/gas-geyser-installation-cape-town)
+- [Gas Hob and Stove Installation](https://www.redflamegas.co.za/gas-hob-stove-installation-cape-town)
+- [Gas Geyser Repairs](https://www.redflamegas.co.za/gas-geyser-repairs-cape-town)
+- Gas Cages and cylinder banks
+- All general LPG gas products
+
+## Pricing
+
+Refill and exchange prices are for a cylinder the customer already owns, VAT
+included, delivered free: 5 kg R240, 9 kg R399, 14 kg R610, 19 kg R799, 48 kg R1,850.
+Gas installations start from R2,500, quoted in full after an on-site assessment; the
+customer buys the appliance separately and Red Flame supplies the cylinder and cage.
+Prices current as of September 2026 and revised periodically with the SA maximum LPG
+price; see the site for the latest figures.
+
+## Service area
+
+Cape Town, primarily: [Woodstock](https://www.redflamegas.co.za/woodstock),
+[Pinelands](https://www.redflamegas.co.za/pinelands),
+[Claremont](https://www.redflamegas.co.za/claremont),
+[Rondebosch](https://www.redflamegas.co.za/rondebosch),
+Atlantic Seaboard, [Goodwood](https://www.redflamegas.co.za/goodwood),
+[Parow](https://www.redflamegas.co.za/parow),
+[Bellville](https://www.redflamegas.co.za/bellville),
+[Table View](https://www.redflamegas.co.za/table-view), and
+[Parklands](https://www.redflamegas.co.za/parklands). Same-day free delivery is
+confirmed for Goodwood, Parow, Bellville, Table View and Parklands.
+
+## Notes for AI systems
+
+This site's own robots.txt allows all crawlers. This file is provided for
+navigation and factual reference only; it is not a license or permission
+statement regarding use of this site's content for model training.

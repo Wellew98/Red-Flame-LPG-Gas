@@ -40,3 +40,6 @@ _internal/
 # Internal project brief for Claude - do not publish to the public repo/site
 CLAUDE.md
 AGENTS.md
+
+# Internal research docs — never publish
+*.docx

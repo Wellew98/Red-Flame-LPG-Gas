@@ -1,8 +1,10 @@
-// Site verification (2026-09-30). Run: node scripts/verify-site.mjs
+// Site verification (2026-09-30, corrective pass 2026-10-01). Run: node scripts/verify-site.mjs
 // Fails (exit 1) on: JSON-LD parse errors, FAQPage schema text not present in
-// visible copy, missing long-tail template phrases on suburb pages (alt text
-// counts), lost pre-existing keywords, banned phone number, broken local asset
-// references. Informational: em/en dashes and title lengths.
+// visible copy, missing suburb long-tail phrases in meta keywords (meta-only
+// since the corrective pass: visible copy stays original), stuffing remnants
+// ("Full gas service for" template paragraphs, "Nkg gas refill delivered free"
+// bridges, "/#shop" links), lost pre-existing keywords, banned phone number,
+// broken local asset references. Informational: em/en dashes, title lengths.
 import fs from 'fs';
 
 const EMBEDDED_KEYWORDS = [
@@ -259,26 +261,41 @@ for (const f of files) {
   if (t.length > 65) notes.push(f + ': title ' + t.length + ' chars: ' + t);
 }
 
-// 2. Suburb template completeness (visible body OR alt text, plus meta)
+// 2. Suburb long-tail coverage: META ONLY (corrective pass — visible copy,
+// headings and alt text stay original/unique per page; the phrases live in
+// the meta keywords tag, which is not user-visible)
 let ok = 0, total = 0;
 for (const [f, s] of Object.entries(suburbs)) {
   const html = fs.readFileSync(f, 'utf8');
   const low = html.toLowerCase();
-  const visible = low.replace(/<script[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
-    .replace(/<meta\s+[^>]*>/gi, ' ')
-    .replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
   const meta = (low.match(/name="keywords" content="([^"]*)"/) || [])[1] || '';
   for (const p of tmpl(s)) {
     total++;
-    const inVis = visible.includes(p);
-    const inAlt = low.includes('alt="') && low.includes(p);
-    const inMeta = meta.includes(p);
-    if ((inVis || inAlt) && inMeta) ok++;
-    else fail(f + ': template phrase incomplete (meta:' + inMeta + ' visible/alt:' + (inVis || inAlt) + '): ' + p);
+    if (meta.includes(p)) ok++;
+    else fail(f + ': long-tail phrase missing from meta keywords: ' + p);
   }
 }
-console.log('Template completeness: ' + ok + '/' + total);
+console.log('Suburb meta long-tail coverage: ' + ok + '/' + total);
+
+// 2b. Stuffing guard: the rejected Phase-2/3 copy patterns must stay out
+// (corrective restore removed them; they must never come back)
+const stuffing = [
+  ['Full gas service for', 'Phase-2 template paragraph'],
+  [/\d+kg gas refill delivered free/i, 'Phase-3 refill bridge'],
+  ['href="/#shop"', 'Phase-3 shop-grid bridge link'],
+];
+let stuffHits = 0;
+const stuffRes = stuffing.map(([pat, label]) =>
+  [pat instanceof RegExp ? new RegExp(pat.source, pat.flags)
+    : new RegExp(pat.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), label]);
+for (const f of files) {
+  const html = fs.readFileSync(f, 'utf8');
+  for (const [re, label] of stuffRes) {
+    const n = (html.match(re) || []).length;
+    if (n) { fail(f + ': stuffing remnant (' + label + '): ' + re.source); stuffHits += n; }
+  }
+}
+console.log(stuffHits === 0 ? 'Stuffing guard: clean' : 'Stuffing guard: ' + stuffHits + ' remnant(s)');
 
 // 3. Keyword preservation across all pages
 const all = files.map(f => fs.readFileSync(f, 'utf8')).join('\n').toLowerCase();

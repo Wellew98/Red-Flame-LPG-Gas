@@ -352,6 +352,12 @@
   .shop-note{max-width:720px;margin:24px 0 0;color:#5c5c5c;font-size:13.5px;line-height:1.65}
   .cyl .btn-wa-sm{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#1a7d3f;color:#fff;padding:11px 12px;border-radius:10px;font-weight:800;font-size:13.5px;text-decoration:none;transition:background .15s ease;margin-top:auto}
   .cyl .btn-wa-sm:hover{background:#15672f}
+  .nav-drop{position:relative;display:inline-flex;align-items:center}
+  .drop-toggle{background:none;border:0;color:#C21A1B;font-size:12px;cursor:pointer;padding:8px 2px 8px 8px;line-height:1}
+  .drop-menu{position:absolute;top:100%;left:-12px;min-width:230px;background:#fff;border:1px solid #ececec;border-radius:12px;box-shadow:0 18px 44px rgba(0,0,0,.14);padding:8px;display:none;z-index:60}
+  .nav-drop.open .drop-menu,.nav-drop:hover .drop-menu,.nav-drop:focus-within .drop-menu{display:block}
+  .drop-menu a{display:block;padding:11px 14px;border-radius:8px;color:#222;text-decoration:none;font-size:14.5px;font-weight:600;white-space:nowrap}
+  .drop-menu a:hover{background:#fff5f5;color:#C21A1B}
 </style>
 </head>
 <body>
@@ -360,7 +366,7 @@
 
 <nav class="main"><div class="wrap nav-inner">
   <a class="brand" href="/"><img class="flame" src="images/red-flame-logo.png" alt="" width="44" height="44" decoding="async"><span><div class="name">Red Flame</div><div class="sub">Gas Supplier · Cape Town</div></span></a>
-  <div class="nav-links"><a href="/#services">Services</a><a href="gas-installation-cape-town">Installations</a><a href="blog">Blog</a><a href="/#coverage">Delivery Areas</a><a href="/#faq">FAQ</a><a href="/#contact">Contact</a></div>
+  <div class="nav-links"><div class="nav-drop"><a href="gas-installation-cape-town">Installations</a><button class="drop-toggle" type="button" aria-expanded="false" aria-label="Show installation pages">&#9662;</button><div class="drop-menu"><a href="gas-installation-cape-town">All Installations</a><a href="gas-geyser-installation-cape-town">Gas Geysers</a><a href="gas-hob-stove-installation-cape-town">Hobs &amp; Stoves</a><a href="gas-coc-cape-town">COC Certificates</a><a href="gas-geyser-repairs-cape-town">Geyser Repairs</a></div></div><a href="blog">Blog</a><a href="/#coverage">Delivery Areas</a><a href="/#faq">FAQ</a><a href="/#contact">Contact</a></div>
   <a class="btn btn-red" href="https://wa.me/27645109495?text=Hi%20Red%20Flame%2C%20I%27m%20on%20the%20Atlantic%20Seaboard%20and%20need%20gas." target="_blank" rel="noopener">Order Now</a>
 </div></nav>
 
@@ -498,7 +504,7 @@
     </div>
   </div>
   <div class="wrap footer-svc">
-    <div class="lbl">All Areas &amp; Services</div>
+    <div class="lbl">All Areas &amp; Installations</div>
     <div class="footer-svc-links">
       <a href="woodstock">Woodstock</a>
       <a href="higgovale">Higgovale</a>
@@ -537,5 +543,8 @@
 </div>
 
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script>
+document.querySelectorAll('.drop-toggle').forEach(function(btn){var drop=btn.closest('.nav-drop');btn.addEventListener('click',function(e){e.stopPropagation();btn.setAttribute('aria-expanded',drop.classList.toggle('open'))});document.addEventListener('click',function(){drop.classList.remove('open');btn.setAttribute('aria-expanded','false')});document.addEventListener('keydown',function(e){if(e.key==='Escape'){drop.classList.remove('open');btn.setAttribute('aria-expanded','false')}})});
+</script>
 </body>
 </html>

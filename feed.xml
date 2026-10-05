@@ -11,7 +11,9 @@
 <itunes:email>info@redflamegas.co.za</itunes:email>
 </itunes:owner>
 <itunes:image href="https://www.redflamegas.co.za/images/podcast-cover.jpg"/>
-<itunes:category text="Home Improvement"/>
+<itunes:category text="Leisure">
+<itunes:category text="Home &amp; Garden"/>
+</itunes:category>
 <itunes:explicit>false</itunes:explicit>
 <item>
 <title>How much is gas refill in Cape Town: 5kg to 48kg prices</title>

@@ -6,15 +6,23 @@
 <description>LPG refill prices, gas installation and Gas Certificate of Compliance advice in Cape Town, built to SANS 10087. From 170 Victoria Road, Woodstock.</description>
 <language>en-za</language>
 <itunes:author>Red Flame Gas Supplier</itunes:author>
+<itunes:owner>
+<itunes:name>Red Flame Gas Supplier</itunes:name>
+<itunes:email>info@redflamegas.co.za</itunes:email>
+</itunes:owner>
+<itunes:image href="https://www.redflamegas.co.za/images/podcast-cover.jpg"/>
 <itunes:category text="Home Improvement"/>
 <itunes:explicit>false</itunes:explicit>
 <item>
 <title>How much is gas refill in Cape Town: 5kg to 48kg prices</title>
 <link>https://www.redflamegas.co.za/gas-refill-prices-cape-town</link>
-<guid>https://www.redflamegas.co.za/gas-refill-prices-cape-town</guid>
+<guid isPermaLink="false">redflame-ep01-refill-prices-2026</guid>
 <pubDate>Sun, 05 Oct 2026 08:00:00 +0200</pubDate>
 <description>5 kg R240, 9 kg R399, 14 kg R610, 19 kg R799, 48 kg R1,850, VAT included, free same-day delivery. Sizing guide, any brand swapped, COC on installs to SANS 10087.</description>
-<enclosure url="https://www.redflamegas.co.za/audio/ep01-gas-refill-prices-cape-town.mp3" type="audio/mpeg"/>
+<itunes:duration>01:30</itunes:duration>
+<itunes:episodeType>full</itunes:episodeType>
+<itunes:explicit>false</itunes:explicit>
+<enclosure url="https://www.redflamegas.co.za/audio/ep01-gas-refill-prices-cape-town.mp3" length="868437" type="audio/mpeg"/>
 </item>
 </channel>
 </rss>
